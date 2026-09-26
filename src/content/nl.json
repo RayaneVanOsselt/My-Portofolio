@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "Rayane Van Osselt — UX/UI-webdesigner & webdeveloper | RVO",
+    "description": "Portfolio van Rayane Van Osselt (RVO), UX/UI-webdesigner en webdeveloper in België: websites op maat, interfaces en verzorgde visuals.",
+    "ogTitle": "Rayane Van Osselt — Webdesign, ontwikkeling & UX/UI",
+    "ogImageAlt": "Logo RVO-DEVUXUI: webdesign, ontwikkeling, gebruikerservaring",
+    "jobTitle": "UX/UI-webdesigner & webdeveloper"
+  },
+  "a11y": {
+    "skip": "Naar de inhoud",
+    "home": "RVO — Rayane Van Osselt, terug naar boven",
+    "mainNav": "Hoofdnavigatie",
+    "footerNav": "Navigatie in de voettekst",
+    "langNav": "Kies een taal",
+    "menuOpen": "Menu openen",
+    "menuClose": "Menu sluiten",
+    "menuLabel": "Menu",
+    "newTab": "(opent in een nieuw tabblad)"
+  },
+  "nav": {
+    "about": "Over mij",
+    "work": "Projecten",
+    "skills": "Vaardigheden",
+    "method": "Werkwijze",
+    "contact": "Contact",
+    "cta": "Start een project"
+  },
+  "hero": {
+    "titleHtml": "Doordacht ontworpen.<br> Zorgvuldig gebouwd.",
+    "lead": "Ik ontwerp en ontwikkel websites en interfaces op maat, van UX-denkwerk tot de lancering. Eén aanspreekpunt, voor een resultaat dat tot in de kleinste details klopt.",
+    "ctaPrimary": "Bekijk mijn werk",
+    "ctaSecondary": "Start een project",
+    "disciplines": ["Webdesign", "Ontwikkeling", "Gebruikerservaring"],
+    "scroll": "Scroll",
+    "visualAlt": "RVO-monogram"
+  },
+  "about": {
+    "label": "Over mij",
+    "titleHtml": "Eén aanspreekpunt,<br> van idee tot scherm.",
+    "lead": "Ik ben Rayane Van Osselt. Ik ontwerp webervaringen van begin tot eind: ik stippel de gebruikerstrajecten uit, ontwerp de interfaces en bouw ze daarna zelf. Wat je in het ontwerp goedkeurt, is precies wat online komt.",
+    "body": "Een goede website voel je nog voor je hem leest: helder, snel en consequent tot in de details. Dat stuurt elke keuze die ik maak, van de eerste wireframe tot de laatste regel code.",
+    "visual": "Mijn blik komt ook uit de wereld van het beeld. Fotobewerking, videomontage, illustratie, opmaak: ik verzorg de visuals die een interface tot leven brengen.",
+    "servicesLabel": "Wat ik aanbied",
+    "services": [
+      { "title": "Webdesign & UX/UI", "text": "Gebruikerstrajecten, wireframes, ontwerpen en prototypes in Figma, gemaakt om in enkele seconden begrepen te worden." },
+      { "title": "Webontwikkeling", "text": "Websites op maat, responsive en meertalig, of een WordPress-site op maat wanneer het project daarom vraagt." },
+      { "title": "Visuele content", "text": "Fotobewerking, videomontage, vectorvisuals en opmaak, voor een identiteit die op elke drager klopt." }
+    ]
+  },
+  "work": {
+    "label": "Geselecteerd werk",
+    "titleHtml": "Van prototype<br> tot live website.",
+    "intro": "Gelanceerde websites, app-ontwerpen, een interactief spel en redactionele opmaak: een selectie die toont hoe ik werk, van concept tot detail.",
+    "liveLabel": "Online",
+    "designTitle": "Design, prototypes & interactief",
+    "designIntro": "Figma-ontwerpen, teamprojecten, een interactief spel en opmaak: de andere kant van mijn werk.",
+    "roleLabel": "Rol",
+    "stackLabel": "Gebouwd met",
+    "toolLabel": "Tool"
+  },
+  "projects": {
+    "rufix": {
+      "title": "Rufix Barber",
+      "category": "Website — design & ontwikkeling",
+      "summary": "De website van een barbier die uitsluitend op afspraak werkt. Een warme, gedempte sfeer die past bij het salon, een afspraakaanvraag in drie stappen en een volledig drietalige ervaring.",
+      "features": ["Afspraakaanvraag in 3 stappen", "Drietalige site: FR · NL · EN", "Klantenreviews, galerij en FAQ", "Op maat gebouwd, zonder CMS"],
+      "role": "UX/UI-design & ontwikkeling",
+      "linkLabel": "Bezoek rufixbarber.com",
+      "alt": "Homepage van Rufix Barber, met de titel „L’art de la coupe masculine”",
+      "logoAlt": "Logo van Rufix Barber"
+    },
+    "wisy": {
+      "title": "Wisy Safety",
+      "category": "Website — WordPress op maat",
+      "summary": "De website van een opleidingscentrum voor veiligheid op het werk (VCA, EPB, eerste hulp) in Anderlecht. Op maat ontworpen secties zetten de erkenning, de partners en de vestiging in de kijker.",
+      "features": ["Secties op maat in WordPress", "Opleidingsaanbod en agenda", "Inschrijvings- en contacttrajecten"],
+      "role": "Design & ontwikkeling",
+      "linkLabel": "Bezoek wisysafety.be",
+      "alt": "Homepage van Wisy Safety, met de titel „La sécurité, comme une référence”",
+      "logoAlt": "Logo van Wisy Safety"
+    },
+    "cafe": {
+      "title": "Café Clavier Causeries",
+      "category": "Identiteit & presentatie — teamproject",
+      "summary": "Een samenwerkingsproject in teamverband: een geïllustreerde identiteit rond een koffiekop-mascotte, een voorstelling van ieders rol en een gezamenlijke pitch, volledig ontworpen in Figma.",
+      "linkLabel": "Bekijk in Figma",
+      "alt": "Logo van Café Clavier Causeries: een lachende, met de hand getekende koffiekop"
+    },
+    "camera": {
+      "title": "Caméra Quartier",
+      "category": "Website-ontwerp",
+      "summary": "Het volledige ontwerp van een website met meerdere pagina’s: structuur, inhoud en navigatie uitgewerkt in Figma, rond een zonnige, kleurrijke identiteit.",
+      "linkLabel": "Bekijk in Figma",
+      "alt": "Logo van Caméra Quartier: een fototoestel in het midden van een geïllustreerde stad"
+    },
+    "prompt": {
+      "title": "Génération Prompt",
+      "category": "App-design",
+      "summary": "De interface van een app rond het genereren van AI-prompts: schermen, gebruikersflows en herbruikbare componenten, ontworpen in Figma.",
+      "linkLabel": "Bekijk in Figma",
+      "alt": "Logo van Génération Prompt: een tekstballon „ai” met kleurverloop"
+    },
+    "labyrinthe": {
+      "title": "Labyrinthe des souvenirs",
+      "category": "Interactief spel — teamproject",
+      "summary": "Een avonturenspel dat we met z’n drieën maakten in Genially: een personage dat je tot het einde loodst, hints en mini-opdrachten (verbinden, slepen, woorden zwart maken), speelbaar op computer, tablet en smartphone.",
+      "linkLabel": "Speel op Genially",
+      "alt": "Logo van Labyrinthe des souvenirs: een gestileerd vierkant doolhof"
+    },
+    "indesign": {
+      "title": "InDesign-werk",
+      "category": "Opmaak — editorial design",
+      "summary": "„L’Orée des Sens”, een brochure van 18 pagina’s voor een spa midden in de natuur: grid, typografie en redactioneel ritme uitgewerkt in InDesign.",
+      "linkLabel": "Bekijk de pdf",
+      "alt": "Icoon van Adobe InDesign"
+    }
+  },
+  "skills": {
+    "label": "Vaardigheden",
+    "titleHtml": "Zes vaardigheden,<br> één hoge lat.",
+    "intro": "Webontwikkeling en UX/UI vormen de kern van mijn werk. Daarrond staan creatieve tools die ik serieus beoefen, zodat ik complete projecten kan afleveren, van code tot beeld.",
+    "listLabel": "Mijn vaardigheden",
+    "hint": "Kies een vaardigheid om te zien wat ik ermee doe.",
+    "usedIn": "Te zien in",
+    "levelLabel": "Niveau:",
+    "groups": { "dev": "Ontwikkeling", "design": "Design", "image": "Foto & video" },
+    "levels": { "expert": "Expert", "pro": "Professioneel", "intermediate": "Halfgevorderd", "competent": "Bekwaam" },
+    "items": {
+      "web": {
+        "name": "Webontwikkeling",
+        "tagline": "De kern van mijn werk.",
+        "description": "Snelle, responsive en toegankelijke websites met nette, onderhoudbare code: HTML, CSS en JavaScript op maat, integraties van externe diensten en WordPress wanneer het project daarom vraagt."
+      },
+      "uxui": {
+        "name": "UX/UI-design",
+        "tagline": "De andere helft van mijn werk.",
+        "description": "Heldere trajecten, een duidelijke visuele hiërarchie, consistente interfaces: ik ontwerp ervaringen die gebruikers moeiteloos begeleiden en zin geven om verder te kijken."
+      },
+      "lightroom": {
+        "name": "Lightroom",
+        "tagline": "Beelden van professionele kwaliteit.",
+        "description": "Retoucheren, kleurcorrectie en consistente reeksen: ik bereid foto’s voor die klaar zijn om een website, portfolio of campagne te versterken."
+      },
+      "figma": {
+        "name": "Figma",
+        "tagline": "Zelfstandig, van ontwerp tot prototype.",
+        "description": "Wireframes, ontwerpen, componenten en prototypes: in Figma ontwerp en presenteer ik mijn interfaces voor ik ze bouw."
+      },
+      "illustrator": {
+        "name": "Illustrator",
+        "tagline": "Vertrouwd met vectorwerk.",
+        "description": "Logo’s, iconen en grafische elementen: ik maak scherpe vectorvisuals, klaar voor scherm en druk."
+      },
+      "premiere": {
+        "name": "Premiere Pro",
+        "tagline": "Nette, doeltreffende montages.",
+        "description": "Montage, ritme en eenvoudige titels: ik maak verzorgde video’s voor het web en sociale media."
+      }
+    }
+  },
+  "method": {
+    "label": "Werkwijze",
+    "titleHtml": "Een heldere aanpak,<br> een verzorgd resultaat.",
+    "intro": "Elk project volgt dezelfde stappen, zodat we zonder verrassingen vooruitgaan en elke beslissing op het juiste moment goedkeuren.",
+    "steps": [
+      { "title": "Begrijpen", "text": "We praten over je doelen, je doelgroep en je inhoud. Ik breng in kaart wat de website moet bereiken, nog voor ik iets ontwerp." },
+      { "title": "Ontwerpen", "text": "Sitestructuur, wireframes en daarna ontwerpen in Figma: je keurt het design en de trajecten goed vóór de eerste regel code." },
+      { "title": "Ontwikkelen", "text": "Ik zet het ontwerp om in nette code: responsive, toegankelijk, snel en meertalig als je doelgroep dat vraagt." },
+      { "title": "Lanceren", "text": "Tests op smartphone, tablet en computer, optimalisatie en daarna de lancering. En we stellen samen bij waar nodig." }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "titleHtml": "Laten we over<br> je project praten.",
+    "intro": "Een website bouwen, een interface herdenken of visuals verfijnen? Stuur me een bericht: ik antwoord persoonlijk, helder en concreet.",
+    "directLabel": "Rechtstreeks",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefoon",
+    "locationLabel": "Gevestigd in",
+    "location": "België",
+    "mailSubject": "Samenwerkingsaanvraag — Portfolio",
+    "copy": "Kopiëren",
+    "copyLabel": "E-mailadres kopiëren",
+    "copied": "Adres gekopieerd"
+  },
+  "form": {
+    "title": "Stuur een aanvraag",
+    "requiredHint": "Velden met een * zijn verplicht.",
+    "name": "Voor- en achternaam",
+    "email": "E-mailadres",
+    "company": "Bedrijf of organisatie",
+    "optional": "optioneel",
+    "needLegend": "Waarmee kan ik je helpen?",
+    "needs": ["Website", "UX/UI & ontwerpen", "Visuele content", "Iets anders"],
+    "message": "Je bericht",
+    "messagePlaceholder": "Vertel over je project, je doelen, je timing…",
+    "privacy": "Je gegevens worden enkel gebruikt om je te antwoorden. Het formulier wordt verzonden via de dienst FormSubmit.",
+    "submit": "Bericht versturen",
+    "sending": "Bezig met versturen…",
+    "successTitle": "Bericht verzonden, bedankt!",
+    "successText": "Je aanvraag is goed vertrokken. Ik antwoord zo snel mogelijk op het opgegeven adres.",
+    "errorTitle": "Het versturen is niet gelukt.",
+    "errorText": "Probeer het zo meteen opnieuw, of mail me rechtstreeks op",
+    "errorSummary": "Het formulier bevat fouten: pas de aangeduide velden aan.",
+    "errors": {
+      "required": "Dit veld is verplicht.",
+      "email": "Vul een geldig e-mailadres in, bijvoorbeeld naam@domein.be.",
+      "short": "Je bericht moet minstens 10 tekens bevatten."
+    }
+  },
+  "footer": {
+    "tagline": "Webdesign · Ontwikkeling · Gebruikerservaring",
+    "navLabel": "Navigatie",
+    "contactLabel": "Contact",
+    "langLabel": "Taal",
+    "backToTop": "Terug naar boven",
+    "rights": "Alle rechten voorbehouden."
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "text": "Deze pagina bestaat niet of werd verplaatst.",
+    "back": "Terug naar de homepage"
+  }
+}

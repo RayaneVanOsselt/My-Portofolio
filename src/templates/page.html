@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="{{ page.lang }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ t.meta.title }}</title>
+  <meta name="description" content="{{ t.meta.description }}">
+  <meta name="author" content="{{ site.name }}">
+  <link rel="canonical" href="{{ page.url }}">
+{{#each page.alternates as alt}}  <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.url }}">
+{{/each}}
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.brand }} — {{ site.name }}">
+  <meta property="og:title" content="{{ t.meta.ogTitle }}">
+  <meta property="og:description" content="{{ t.meta.description }}">
+  <meta property="og:url" content="{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}assets/img/brand/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ t.meta.ogImageAlt }}">
+  <meta property="og:locale" content="{{ page.locale }}">
+{{#each page.otherLocales as locale}}  <meta property="og:locale:alternate" content="{{ locale }}">
+{{/each}}
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="{{ page.base }}favicon.ico" sizes="32x32 48x48">
+  <link rel="apple-touch-icon" href="{{ page.base }}assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="{{ page.base }}site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@200..700&display=swap">
+  <link rel="stylesheet" href="{{ page.base }}assets/css/main.css?v={{ build.css }}">
+
+  <script>
+    (function (d, w) {
+      var root = d.documentElement;
+      root.classList.replace('no-js', 'js');
+      try {
+        var saved = w.localStorage.getItem('rvo:lang');
+{{#if page.isDefault}}        if (saved === 'en' || saved === 'nl') { w.location.replace(saved + '/' + w.location.hash); return; }
+{{/if}}        if (w.sessionStorage.getItem('rvo:lang-switch')) root.classList.add('is-lang-switch');
+      } catch (e) {}
+    })(document, window);
+  </script>
+  <script type="importmap">{{{ page.importMap }}}</script>
+{{#each page.modulePreloads as href}}  <link rel="modulepreload" href="{{ href }}">
+{{/each}}
+  <script type="module" src="{{ page.base }}assets/js/main.js?v={{ build.js }}"></script>
+  <script type="application/ld+json">{{{ page.jsonld }}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ t.a11y.skip }}</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="{{ t.a11y.home }}">
+        <picture class="brand__mark">
+          <source type="image/avif" srcset="{{ page.base }}assets/img/brand/rvo-mark.avif">
+          <img src="{{ page.base }}assets/img/brand/rvo-mark.png" width="342" height="128" alt="">
+        </picture>
+        <span class="brand__name" aria-hidden="true">Rayane Van Osselt</span>
+      </a>
+
+      <nav class="site-nav" aria-label="{{ t.a11y.mainNav }}">
+        <ul class="site-nav__list">
+          {{> nav-links }}
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <nav class="lang-switch" aria-label="{{ t.a11y.langNav }}">
+          <ul class="lang-switch__list">
+            {{> lang-links }}
+          </ul>
+        </nav>
+        <a class="header-cta" href="#contact"><span>{{ t.nav.cta }}</span>{{> icon-arrow }}</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+          <span class="sr-only">{{ t.a11y.menuOpen }}</span>
+          <span class="menu-button__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <dialog class="mobile-menu" id="mobile-menu" aria-label="{{ t.a11y.menuLabel }}" data-menu>
+    <div class="mobile-menu__top">
+      <picture class="brand__mark">
+        <source type="image/avif" srcset="{{ page.base }}assets/img/brand/rvo-mark.avif">
+        <img src="{{ page.base }}assets/img/brand/rvo-mark.png" width="342" height="128" alt="RVO">
+      </picture>
+      <button class="menu-close" type="button" data-menu-close>
+        <span class="sr-only">{{ t.a11y.menuClose }}</span>
+        <span class="menu-close__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="{{ t.a11y.mainNav }}">
+      <ul>
+        {{> nav-links }}
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot">
+      <nav class="lang-switch lang-switch--full" aria-label="{{ t.a11y.langNav }}">
+        <ul class="lang-switch__list">
+          {{> lang-links }}
+        </ul>
+      </nav>
+      <a class="mobile-menu__mail" href="{{ page.mailto }}">{{ site.email }}</a>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
+      <canvas class="hero__canvas" aria-hidden="true" data-constellation></canvas>
+      <div class="hero__inner container">
+        <div class="hero__visual" aria-hidden="true" data-constellation-target>
+          <picture class="hero__fallback">
+            <source type="image/avif" srcset="{{ page.base }}assets/img/brand/rvo-mark.avif">
+            <img src="{{ page.base }}assets/img/brand/rvo-mark.png" width="342" height="128" alt="">
+          </picture>
+        </div>
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__eyebrow"><span>{{ site.name }}</span><span class="hero__sep" aria-hidden="true"> — </span><span class="hero__role">{{ t.meta.jobTitle }}</span></span>
+            <span class="hero__headline">{{{ t.hero.titleHtml }}}</span>
+          </h1>
+          <p class="hero__lead">{{ t.hero.lead }}</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work"><span>{{ t.hero.ctaPrimary }}</span>{{> icon-down }}</a>
+            <a class="link-arrow" href="#contact"><span>{{ t.hero.ctaSecondary }}</span>{{> icon-arrow }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__foot container">
+        <ol class="hero__disciplines">
+          {{#each t.hero.disciplines as discipline}}<li><span class="index">{{ @num }}</span>{{ discipline }}</li>
+          {{/each}}
+        </ol>
+        <a class="scroll-cue" href="#about"><span>{{ t.hero.scroll }}</span><span class="scroll-cue__line" aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about__grid">
+          <header class="section-head about__head">
+            <p class="label" data-reveal>{{ t.about.label }}</p>
+            <h2 class="title-lg" id="about-title" data-reveal>{{{ t.about.titleHtml }}}</h2>
+          </header>
+          <div class="about__body">
+            <p class="lead" data-reveal>{{ t.about.lead }}</p>
+            <p data-reveal>{{ t.about.body }}</p>
+            <p data-reveal>{{ t.about.visual }}</p>
+          </div>
+        </div>
+
+        <div class="services">
+          <h3 class="label" data-reveal>{{ t.about.servicesLabel }}</h3>
+          <ul class="services__list">
+            {{#each t.about.services as service}}<li class="service" data-reveal>
+              <span class="index">{{ @num }}</span>
+              <h4 class="service__title">{{ service.title }}</h4>
+              <p class="service__text">{{ service.text }}</p>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="label" data-reveal>{{ t.work.label }} <span class="label__count">({{ projects.count }})</span></p>
+            <h2 class="title-lg" id="work-title" data-reveal>{{{ t.work.titleHtml }}}</h2>
+          </div>
+          <p class="section-head__intro" data-reveal>{{ t.work.intro }}</p>
+        </header>
+
+        <div class="cases">
+          {{#each projects.featured as p}}<article class="case case--{{ p.id }}" id="project-{{ p.id }}" aria-labelledby="project-{{ p.id }}-title" style="--accent: {{ p.accent }}">
+            <div class="case__media" data-reveal>
+              <a class="browser" href="{{ p.url }}" target="_blank" rel="noopener" tabindex="-1" aria-describedby="new-tab-hint">
+                <span class="browser__bar" aria-hidden="true"><span class="browser__dots"></span><span class="browser__url">{{ p.domain }}</span></span>
+                <span class="browser__screen">
+                  <picture>
+                    <source type="image/avif" srcset="{{ p.shot.srcset }}" sizes="(min-width: 1320px) 780px, (min-width: 960px) 60vw, 94vw">
+                    <img src="{{ p.shot.src }}" width="{{ p.shot.w }}" height="{{ p.shot.h }}" alt="{{ p.alt }}" loading="lazy" decoding="async">
+                  </picture>
+                </span>
+              </a>
+              <picture class="case__badge">
+                <source type="image/avif" srcset="{{ p.logo.srcset }}" sizes="120px">
+                <img src="{{ p.logo.src }}" width="{{ p.logo.w }}" height="{{ p.logo.h }}" alt="{{ p.logoAlt }}" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="case__info">
+              <p class="case__kicker"><span class="index">{{ p.num }}</span><span class="live">{{ t.work.liveLabel }}</span></p>
+              <h3 class="case__title" id="project-{{ p.id }}-title" data-reveal>{{ p.title }}</h3>
+              <p class="case__category" data-reveal>{{ p.category }}</p>
+              <p class="case__summary" data-reveal>{{ p.summary }}</p>
+              <ul class="case__features" data-reveal>
+                {{#each p.features as feature}}<li>{{ feature }}</li>
+                {{/each}}
+              </ul>
+              <dl class="case__facts" data-reveal>
+                <div><dt>{{ t.work.roleLabel }}</dt><dd>{{ p.role }}</dd></div>
+                <div><dt>{{ t.work.stackLabel }}</dt><dd><ul class="tags">{{#each p.stack as tech}}<li>{{ tech }}</li>{{/each}}</ul></dd></div>
+              </dl>
+              <a class="link-arrow link-arrow--lg" href="{{ p.url }}" target="_blank" rel="noopener" aria-describedby="new-tab-hint" data-reveal><span>{{ p.linkLabel }}</span>{{> icon-external }}</a>
+            </div>
+          </article>
+          {{/each}}
+        </div>
+
+        <div class="design-work">
+          <header class="design-work__head">
+            <h3 class="title-md" data-reveal>{{ t.work.designTitle }}</h3>
+            <p data-reveal>{{ t.work.designIntro }}</p>
+          </header>
+          <ul class="mosaic">
+            {{#each projects.others as p}}<li class="tile tile--{{ p.id }}" id="project-{{ p.id }}" data-reveal>
+              <div class="tile__plate" style="--plate: {{ p.plate }}; --inset: {{ p.inset }}">
+                <picture>
+                  <source type="image/avif" srcset="{{ p.image.srcset }}" sizes="(min-width: 960px) 45vw, 94vw">
+                  <img src="{{ p.image.src }}" width="{{ p.image.w }}" height="{{ p.image.h }}" alt="{{ p.alt }}" loading="lazy" decoding="async">
+                </picture>
+                <span class="tile__chip" aria-hidden="true">{{> icon-external }}</span>
+              </div>
+              <div class="tile__body">
+                <p class="tile__meta"><span class="index">{{ p.num }}</span><span>{{ p.tool }}</span></p>
+                <h4 class="tile__title"><a class="tile__link" href="{{ p.url }}" target="_blank" rel="noopener" aria-describedby="new-tab-hint">{{ p.title }}</a></h4>
+                <p class="tile__category">{{ p.category }}</p>
+                <p class="tile__summary">{{ p.summary }}</p>
+                <p class="tile__cta" aria-hidden="true"><span>{{ p.linkLabel }}</span>{{> icon-external }}</p>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="label" data-reveal>{{ t.skills.label }}</p>
+            <h2 class="title-lg" id="skills-title" data-reveal>{{{ t.skills.titleHtml }}}</h2>
+          </div>
+          <p class="section-head__intro" data-reveal>{{ t.skills.intro }}</p>
+        </header>
+
+        <div class="skills__console" data-skills data-reveal>
+          <div class="skills__rail">
+            <p class="skills__hint" id="skills-hint">{{ t.skills.hint }}</p>
+            <div class="skills__list" role="tablist" aria-label="{{ t.skills.listLabel }}" aria-describedby="skills-hint">
+              {{#each skills as s}}<button class="skill-tab" type="button" role="tab" id="skill-tab-{{ s.id }}" aria-controls="skill-panel-{{ s.id }}" aria-selected="{{ s.selected }}" tabindex="{{ s.tabindex }}" style="--skill: {{ s.color }}" data-color="{{ s.color }}">
+                <picture class="skill-tab__icon">
+                  <source type="image/avif" srcset="{{ s.icon.avif }}">
+                  <img src="{{ s.icon.png }}" width="320" height="320" alt="" loading="lazy" decoding="async">
+                </picture>
+                <span class="skill-tab__name">{{ s.name }}</span>
+                <span class="skill-tab__level">{{ s.levelLabel }}</span>
+              </button>
+              {{/each}}
+            </div>
+          </div>
+
+          <div class="skills__stage">
+            {{#each skills as s}}<div class="skill-panel" role="tabpanel" id="skill-panel-{{ s.id }}" aria-labelledby="skill-tab-{{ s.id }}" tabindex="0" style="--skill-own: {{ s.color }}"{{#if s.selected}}{{else}} hidden{{/if}}>
+              <div class="skill-panel__art" aria-hidden="true">
+                <span class="skill-panel__orbit"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <picture>
+                  <source type="image/avif" srcset="{{ s.icon.avif }}">
+                  <img src="{{ s.icon.png }}" width="320" height="320" alt="" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="skill-panel__content">
+                <p class="skill-panel__group">{{ s.groupLabel }}</p>
+                <h3 class="skill-panel__name">{{ s.name }}</h3>
+                <p class="skill-panel__level"><span class="level-badge level-badge--{{ s.level }}"><span class="sr-only">{{ t.skills.levelLabel }} </span>{{ s.levelLabel }}</span><span class="skill-panel__tagline">{{ s.tagline }}</span></p>
+                <p class="skill-panel__desc">{{ s.description }}</p>
+                {{#if s.usedIn}}<p class="skill-panel__used"><span class="skill-panel__used-label">{{ t.skills.usedIn }}</span>{{#each s.usedIn as u}}<a href="#project-{{ u.id }}">{{ u.title }}</a>{{/each}}</p>{{/if}}
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="method" aria-labelledby="method-title">
+      <div class="container method__grid">
+        <header class="section-head method__head">
+          <p class="label" data-reveal>{{ t.method.label }}</p>
+          <h2 class="title-lg" id="method-title" data-reveal>{{{ t.method.titleHtml }}}</h2>
+          <p class="section-head__intro" data-reveal>{{ t.method.intro }}</p>
+        </header>
+        <ol class="steps">
+          {{#each t.method.steps as step}}<li class="step" data-reveal>
+            <span class="step__num">{{ @num }}</span>
+            <h3 class="step__title">{{ step.title }}</h3>
+            <p class="step__text">{{ step.text }}</p>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="contact__head">
+          <p class="label" data-reveal>{{ t.contact.label }}</p>
+          <h2 class="display contact__title" id="contact-title" data-reveal>{{{ t.contact.titleHtml }}}</h2>
+          <p class="lead contact__intro" data-reveal>{{ t.contact.intro }}</p>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__direct" data-reveal>
+            <p class="contact__direct-label">{{ t.contact.directLabel }}</p>
+            <dl class="channels">
+              <div class="channel">
+                <dt>{{ t.contact.emailLabel }}</dt>
+                <dd>
+                  <a class="channel__value" href="{{ page.mailto }}">{{ site.email }}</a>
+                  <button class="copy-button" type="button" data-copy="{{ site.email }}" aria-label="{{ t.contact.copyLabel }}" hidden>
+                    <span data-copy-text>{{ t.contact.copy }}</span>
+                  </button>
+                </dd>
+              </div>
+              <div class="channel">
+                <dt>{{ t.contact.phoneLabel }}</dt>
+                <dd><a class="channel__value" href="tel:{{ site.phone.href }}">{{ site.phone.display }}</a></dd>
+              </div>
+              <div class="channel">
+                <dt>{{ t.contact.locationLabel }}</dt>
+                <dd><span class="channel__value">{{ t.contact.location }}</span></dd>
+              </div>
+            </dl>
+            <p class="sr-only" role="status" data-copy-status></p>
+          </div>
+
+          <form class="contact-form" action="{{ site.form.fallbackAction }}" method="POST" data-contact-form data-endpoint="{{ site.form.endpoint }}" data-reveal>
+            <div class="contact-form__head">
+              <h3 class="contact-form__title">{{ t.form.title }}</h3>
+              <p class="contact-form__hint">{{ t.form.requiredHint }}</p>
+            </div>
+
+            <div class="contact-form__summary" tabindex="-1" hidden data-form-summary></div>
+
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="cf-name">{{ t.form.name }} <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="cf-name" name="nom" type="text" autocomplete="name" required maxlength="120" aria-describedby="cf-name-error">
+                <p class="field__error" id="cf-name-error"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="cf-email">{{ t.form.email }} <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required maxlength="160" aria-describedby="cf-email-error">
+                <p class="field__error" id="cf-email-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="cf-company">{{ t.form.company }} <span class="field__opt">({{ t.form.optional }})</span></label>
+              <input class="field__input" id="cf-company" name="entreprise" type="text" autocomplete="organization" maxlength="160">
+            </div>
+
+            <fieldset class="field field--choice">
+              <legend class="field__label">{{ t.form.needLegend }} <span class="field__opt">({{ t.form.optional }})</span></legend>
+              <div class="chips">
+                {{#each formNeeds as need}}<label class="chip"><input type="radio" name="besoin" value="{{ need.value }}"><span class="chip__label">{{ need.label }}</span></label>
+                {{/each}}
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="field__label" for="cf-message">{{ t.form.message }} <span class="field__req" aria-hidden="true">*</span></label>
+              <textarea class="field__input field__input--area" id="cf-message" name="message" rows="5" required minlength="10" maxlength="4000" placeholder="{{ t.form.messagePlaceholder }}" aria-describedby="cf-message-error"></textarea>
+              <p class="field__error" id="cf-message-error"></p>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="cf-website">Website</label>
+              <input id="cf-website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="_subject" value="{{ site.form.subject }} ({{ page.langUpper }})">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="langue" value="{{ page.langUpper }}">
+
+            <p class="contact-form__privacy">{{ t.form.privacy }}</p>
+            <div class="contact-form__actions">
+              <button class="btn btn--primary btn--submit" type="submit" data-submit>
+                <span data-submit-label>{{ t.form.submit }}</span>{{> icon-arrow }}
+              </button>
+            </div>
+            <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <picture>
+            <source type="image/avif" srcset="{{ page.base }}assets/img/brand/rvo-logo.avif">
+            <img src="{{ page.base }}assets/img/brand/rvo-logo.png" width="880" height="440" alt="RVO-DEVUXUI" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <nav class="site-footer__col" aria-label="{{ t.a11y.footerNav }}">
+          <p class="site-footer__heading">{{ t.footer.navLabel }}</p>
+          <ul>
+            {{> nav-links }}
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__heading">{{ t.footer.contactLabel }}</p>
+          <ul>
+            <li><a href="{{ page.mailto }}">{{ site.email }}</a></li>
+            <li><a href="tel:{{ site.phone.href }}">{{ site.phone.display }}</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__heading">{{ t.footer.langLabel }}</p>
+          <nav class="lang-switch lang-switch--list" aria-label="{{ t.a11y.langNav }}">
+            <ul class="lang-switch__list">
+              {{> lang-links }}
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© {{ build.year }} {{ site.name }} — {{ site.brandLong }}. {{ t.footer.rights }}</p>
+        <a class="to-top" href="#top"><span>{{ t.footer.backToTop }}</span>{{> icon-up }}</a>
+      </div>
+    </div>
+  </footer>
+
+  <span id="new-tab-hint" hidden>{{ t.a11y.newTab }}</span>
+  <script type="application/json" id="ui-strings">{{{ page.ui }}}</script>
+</body>
+</html>

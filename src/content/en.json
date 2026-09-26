@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "Rayane Van Osselt — UX/UI Web Designer & Web Developer | RVO",
+    "description": "Portfolio of Rayane Van Osselt (RVO), UX/UI web designer and web developer in Belgium: custom websites, interfaces and polished visuals.",
+    "ogTitle": "Rayane Van Osselt — Web design, development & UX/UI",
+    "ogImageAlt": "RVO-DEVUXUI logo: web design, development, user experience",
+    "jobTitle": "UX/UI web designer & web developer"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "RVO — Rayane Van Osselt, back to top",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "langNav": "Choose language",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "menuLabel": "Menu",
+    "newTab": "(opens in a new tab)"
+  },
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "skills": "Skills",
+    "method": "Approach",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "hero": {
+    "titleHtml": "Designed with&nbsp;intent.<br> Built with&nbsp;care.",
+    "lead": "I design and build custom websites and interfaces, from UX thinking all the way to launch. One point of contact, for a result that stays consistent down to the smallest detail.",
+    "ctaPrimary": "See my work",
+    "ctaSecondary": "Start a project",
+    "disciplines": ["Web design", "Development", "User experience"],
+    "scroll": "Scroll",
+    "visualAlt": "RVO monogram"
+  },
+  "about": {
+    "label": "About",
+    "titleHtml": "One point of contact,<br> from idea to screen.",
+    "lead": "I’m Rayane Van Osselt. I design web experiences end to end: I shape the user journeys, design the interfaces, then build them myself. What you approve in the mockup is exactly what goes live.",
+    "body": "To me, a good website is felt before it is read: clear, fast and consistent down to the details. That’s what drives every decision I make, from the first wireframe to the last line of code.",
+    "visual": "My eye also comes from imagery. Photo editing, video, illustration, layout: I take care of the visuals that bring an interface to life.",
+    "servicesLabel": "What I offer",
+    "services": [
+      { "title": "Web design & UX/UI", "text": "User journeys, wireframes, mockups and prototypes in Figma, designed to be understood in seconds." },
+      { "title": "Web development", "text": "Custom, responsive and multilingual websites, or a tailored WordPress build when the project calls for it." },
+      { "title": "Visual content", "text": "Photo editing, video, vector graphics and layout, for an identity that holds together on every medium." }
+    ]
+  },
+  "work": {
+    "label": "Selected work",
+    "titleHtml": "From prototype<br> to live website.",
+    "intro": "Launched websites, app mockups, an interactive game and editorial layout: a selection that shows how I work, from concept to detail.",
+    "liveLabel": "Live",
+    "designTitle": "Design, prototypes & interactive",
+    "designIntro": "Figma mockups, team projects, an interactive game and print layout: the other side of my work.",
+    "roleLabel": "Role",
+    "stackLabel": "Built with",
+    "toolLabel": "Tool"
+  },
+  "projects": {
+    "rufix": {
+      "title": "Rufix Barber",
+      "category": "Website — design & development",
+      "summary": "The website of a barber who works by appointment only. A warm, low-lit atmosphere true to the salon, a three-step booking request and a fully trilingual experience.",
+      "features": ["Three-step booking request", "Trilingual site: FR · NL · EN", "Customer reviews, gallery and FAQ", "Custom-built, no CMS"],
+      "role": "UX/UI design & development",
+      "linkLabel": "Visit rufixbarber.com",
+      "alt": "Rufix Barber homepage, headlined “L’art de la coupe masculine”",
+      "logoAlt": "Rufix Barber logo"
+    },
+    "wisy": {
+      "title": "Wisy Safety",
+      "category": "Website — custom WordPress",
+      "summary": "The website of an occupational safety training centre (VCA, EPB, first aid) based in Anderlecht, Brussels. Custom-designed sections showcase its accreditation, partners and premises.",
+      "features": ["Custom sections built into WordPress", "Training catalogue and schedule", "Sign-up and contact journeys"],
+      "role": "Design & development",
+      "linkLabel": "Visit wisysafety.be",
+      "alt": "Wisy Safety homepage, headlined “La sécurité, comme une référence”",
+      "logoAlt": "Wisy Safety logo"
+    },
+    "cafe": {
+      "title": "Café Clavier Causeries",
+      "category": "Identity & presentation — team project",
+      "summary": "A collaborative project built as a team: an illustrated identity around a coffee-cup mascot, a presentation of each member’s role and a shared pitch, all designed in Figma.",
+      "linkLabel": "View in Figma",
+      "alt": "Café Clavier Causeries logo: a smiling, hand-drawn coffee cup"
+    },
+    "camera": {
+      "title": "Caméra Quartier",
+      "category": "Website mockup",
+      "summary": "A complete multi-page website mockup: structure, content and navigation designed in Figma around a bright, sunny identity.",
+      "linkLabel": "View in Figma",
+      "alt": "Caméra Quartier logo: a camera at the centre of an illustrated city"
+    },
+    "prompt": {
+      "title": "Génération Prompt",
+      "category": "App design",
+      "summary": "The interface of an app dedicated to generating AI prompts: screens, user flows and reusable components, designed in Figma.",
+      "linkLabel": "View in Figma",
+      "alt": "Génération Prompt logo: a gradient “ai” speech bubble"
+    },
+    "labyrinthe": {
+      "title": "Labyrinthe des souvenirs",
+      "category": "Interactive game — team project",
+      "summary": "An adventure game made by a team of three in Genially: a character to guide to the very end, hints and mini-challenges (connect, drag, black out words), playable on computer, tablet and phone.",
+      "linkLabel": "Play on Genially",
+      "alt": "Labyrinthe des souvenirs logo: a stylised square maze"
+    },
+    "indesign": {
+      "title": "InDesign work",
+      "category": "Layout — editorial design",
+      "summary": "“L’Orée des Sens”, an 18-page brochure for a spa set in the heart of nature: grid, typography and editorial rhythm crafted in InDesign.",
+      "linkLabel": "View the PDF",
+      "alt": "Adobe InDesign icon"
+    }
+  },
+  "skills": {
+    "label": "Skills",
+    "titleHtml": "Six skills,<br> one standard.",
+    "intro": "Web development and UX/UI are at the core of what I do. Around them sit creative tools I practise seriously, so I can deliver complete projects, from code to imagery.",
+    "listLabel": "My skills",
+    "hint": "Pick a skill to see what I do with it.",
+    "usedIn": "See it in",
+    "levelLabel": "Level:",
+    "groups": { "dev": "Development", "design": "Design", "image": "Photo & video" },
+    "levels": { "expert": "Expert", "pro": "Professional", "intermediate": "Intermediate", "competent": "Competent" },
+    "items": {
+      "web": {
+        "name": "Web development",
+        "tagline": "The core of my work.",
+        "description": "Fast, responsive and accessible websites with clean, maintainable code: hand-written HTML, CSS and JavaScript, third-party integrations, and WordPress when the project calls for it."
+      },
+      "uxui": {
+        "name": "UX/UI design",
+        "tagline": "The other half of my work.",
+        "description": "Clear journeys, sharp visual hierarchy, consistent interfaces: I design experiences that guide users effortlessly and make them want to explore further."
+      },
+      "lightroom": {
+        "name": "Lightroom",
+        "tagline": "Professional-grade images.",
+        "description": "Retouching, colour grading and consistent series: I prepare photos that are ready to elevate a website, a portfolio or a campaign."
+      },
+      "figma": {
+        "name": "Figma",
+        "tagline": "Self-sufficient, from mockup to prototype.",
+        "description": "Wireframes, mockups, components and prototypes: Figma is where I design and present my interfaces before building them."
+      },
+      "illustrator": {
+        "name": "Illustrator",
+        "tagline": "Comfortable with vectors.",
+        "description": "Logos, icons and graphic elements: I create crisp vector visuals, ready for screen and print."
+      },
+      "premiere": {
+        "name": "Premiere Pro",
+        "tagline": "Clean, effective edits.",
+        "description": "Cutting, pacing and simple titling: I produce polished videos for the web and social media."
+      }
+    }
+  },
+  "method": {
+    "label": "Approach",
+    "titleHtml": "A clear process,<br> a polished result.",
+    "intro": "Every project follows the same steps, so we move forward without surprises and approve each decision at the right time.",
+    "steps": [
+      { "title": "Understand", "text": "We talk through your goals, your audience and your content. I clarify what the website needs to achieve before designing anything." },
+      { "title": "Design", "text": "Site map, wireframes, then Figma mockups: you approve the design and user flows before the first line of code." },
+      { "title": "Build", "text": "I turn the mockup into clean code: responsive, accessible, fast, and multilingual if your audience needs it." },
+      { "title": "Launch", "text": "Testing on mobile, tablet and desktop, optimisation, then launch. And we fine-tune together if needed." }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "titleHtml": "Let’s talk about<br> your project.",
+    "intro": "A website to build, an interface to rethink or visuals to refine? Write to me: I’ll reply personally, with a clear and concrete answer.",
+    "directLabel": "Direct",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Based in",
+    "location": "Belgium",
+    "mailSubject": "Collaboration request — Portfolio",
+    "copy": "Copy",
+    "copyLabel": "Copy email address",
+    "copied": "Address copied"
+  },
+  "form": {
+    "title": "Send a request",
+    "requiredHint": "Fields marked with * are required.",
+    "name": "Full name",
+    "email": "Email address",
+    "company": "Company or organisation",
+    "optional": "optional",
+    "needLegend": "What do you need?",
+    "needs": ["Website", "UX/UI & mockups", "Visual content", "Other"],
+    "message": "Your message",
+    "messagePlaceholder": "Tell me about your project, your goals, your timeline…",
+    "privacy": "Your details are only used to reply to you. The form is delivered by the FormSubmit service.",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "successTitle": "Message sent — thank you!",
+    "successText": "Your request is on its way. I’ll get back to you as soon as possible at the address you provided.",
+    "errorTitle": "Your message couldn’t be sent.",
+    "errorText": "Please try again in a moment, or email me directly at",
+    "errorSummary": "The form contains errors: please correct the highlighted fields.",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address, e.g. name@domain.com.",
+      "short": "Your message must be at least 10 characters long."
+    }
+  },
+  "footer": {
+    "tagline": "Web design · Development · User experience",
+    "navLabel": "Navigation",
+    "contactLabel": "Contact",
+    "langLabel": "Language",
+    "backToTop": "Back to top",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page doesn’t exist or has been moved.",
+    "back": "Back to home"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "Rayane Van Osselt — Web designer UX/UI & développeur web | RVO",
+    "description": "Portfolio de Rayane Van Osselt (RVO), web designer UX/UI et développeur web en Belgique : sites sur-mesure, interfaces et visuels soignés.",
+    "ogTitle": "Rayane Van Osselt — Web design, développement & UX/UI",
+    "ogImageAlt": "Logo RVO-DEVUXUI : web design, développement, expérience utilisateur",
+    "jobTitle": "Web designer UX/UI & développeur web"
+  },
+  "a11y": {
+    "skip": "Aller au contenu",
+    "home": "RVO — Rayane Van Osselt, retour en haut de page",
+    "mainNav": "Navigation principale",
+    "footerNav": "Navigation du pied de page",
+    "langNav": "Choisir la langue",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "menuLabel": "Menu",
+    "newTab": "(s’ouvre dans un nouvel onglet)"
+  },
+  "nav": {
+    "about": "À propos",
+    "work": "Projets",
+    "skills": "Compétences",
+    "method": "Méthode",
+    "contact": "Contact",
+    "cta": "Démarrer un projet"
+  },
+  "hero": {
+    "titleHtml": "Design pensé,<br> code soigné.",
+    "lead": "Je conçois et développe des sites web et des interfaces sur-mesure, de la réflexion UX jusqu’à la mise en ligne. Un seul interlocuteur, pour un résultat cohérent jusque dans les détails.",
+    "ctaPrimary": "Voir mes projets",
+    "ctaSecondary": "Démarrer un projet",
+    "disciplines": ["Web design", "Développement", "Expérience utilisateur"],
+    "scroll": "Défiler",
+    "visualAlt": "Monogramme RVO"
+  },
+  "about": {
+    "label": "À propos",
+    "titleHtml": "Un seul interlocuteur,<br> de l’idée à l’écran.",
+    "lead": "Je m’appelle Rayane Van Osselt. Je conçois des expériences web de bout en bout : je structure les parcours, je dessine les interfaces, puis je les développe moi-même. Ce que vous validez en maquette est exactement ce qui arrive en ligne.",
+    "body": "Pour moi, un bon site se ressent avant de se lire : il est clair, rapide et cohérent jusque dans ses détails. C’est ce qui guide chacun de mes choix, du premier wireframe à la dernière ligne de code.",
+    "visual": "Mon regard vient aussi de l’image. Retouche photo, montage vidéo, illustration, mise en page : je soigne les visuels qui donnent vie à une interface.",
+    "servicesLabel": "Ce que je propose",
+    "services": [
+      { "title": "Web design & UX/UI", "text": "Parcours utilisateurs, wireframes, maquettes et prototypes sur Figma, pensés pour être compris en quelques secondes." },
+      { "title": "Développement web", "text": "Sites vitrines sur-mesure, responsive et multilingues, ou WordPress personnalisé quand le projet s’y prête." },
+      { "title": "Contenus visuels", "text": "Retouche photo, montage vidéo, visuels vectoriels et mise en page, pour une identité cohérente sur tous les supports." }
+    ]
+  },
+  "work": {
+    "label": "Projets sélectionnés",
+    "titleHtml": "Du prototype<br> au site en ligne.",
+    "intro": "Des sites livrés, des maquettes d’applications, un jeu interactif et de la mise en page : une sélection qui montre ma façon de travailler, du concept au détail.",
+    "liveLabel": "En ligne",
+    "designTitle": "Design, prototypes & interactif",
+    "designIntro": "Maquettes Figma, projets d’équipe, jeu interactif et édition : l’autre versant de mon travail.",
+    "roleLabel": "Rôle",
+    "stackLabel": "Technologies",
+    "toolLabel": "Outil"
+  },
+  "projects": {
+    "rufix": {
+      "title": "Rufix Barber",
+      "category": "Site web — design & développement",
+      "summary": "Le site d’un barbier qui travaille uniquement sur rendez-vous. Une ambiance feutrée à l’image du salon, une prise de rendez-vous en trois étapes et une expérience entièrement trilingue.",
+      "features": ["Demande de rendez-vous en 3 étapes", "Site trilingue FR · NL · EN", "Avis clients, galerie et FAQ", "Développé sur-mesure, sans CMS"],
+      "role": "Design UX/UI & développement",
+      "linkLabel": "Visiter rufixbarber.com",
+      "alt": "Page d’accueil du site Rufix Barber, avec le titre « L’art de la coupe masculine »",
+      "logoAlt": "Logo Rufix Barber"
+    },
+    "wisy": {
+      "title": "Wisy Safety",
+      "category": "Site web — WordPress sur-mesure",
+      "summary": "Le site d’un centre de formation à la sécurité au travail (VCA, PEB, premiers secours) basé à Anderlecht. Des sections conçues sur-mesure mettent en avant l’agrément, les partenaires et l’établissement.",
+      "features": ["Sections sur-mesure intégrées à WordPress", "Catalogue de formations et agenda", "Parcours d’inscription et de contact"],
+      "role": "Design & développement",
+      "linkLabel": "Visiter wisysafety.be",
+      "alt": "Page d’accueil du site Wisy Safety, avec le titre « La sécurité, comme une référence »",
+      "logoAlt": "Logo Wisy Safety"
+    },
+    "cafe": {
+      "title": "Café Clavier Causeries",
+      "category": "Identité & présentation — projet d’équipe",
+      "summary": "Un projet collaboratif pensé en équipe : une identité illustrée autour d’une tasse-mascotte, la présentation des rôles de chacun et un argumentaire construit ensemble sur Figma.",
+      "linkLabel": "Voir sur Figma",
+      "alt": "Logo Café Clavier Causeries : une tasse de café souriante dessinée à la main"
+    },
+    "camera": {
+      "title": "Caméra Quartier",
+      "category": "Maquette de site web",
+      "summary": "La maquette complète d’un site multi-pages : structure, contenus et navigation pensés dans Figma autour d’une identité solaire et colorée.",
+      "linkLabel": "Voir sur Figma",
+      "alt": "Logo Caméra Quartier : un appareil photo au centre d’une ville illustrée"
+    },
+    "prompt": {
+      "title": "Génération Prompt",
+      "category": "Design d’application",
+      "summary": "L’interface d’une application consacrée à la génération de prompts d’IA : écrans, parcours utilisateur et composants réutilisables, conçus dans Figma.",
+      "linkLabel": "Voir sur Figma",
+      "alt": "Logo Génération Prompt : une bulle de dialogue « ai » en dégradé"
+    },
+    "labyrinthe": {
+      "title": "Labyrinthe des souvenirs",
+      "category": "Jeu interactif — projet d’équipe",
+      "summary": "Un jeu d’aventure réalisé à trois sur Genially : un personnage à guider jusqu’au bout, des indices et des mini-épreuves (relier, glisser, noircir des mots), jouable sur ordinateur, tablette et téléphone.",
+      "linkLabel": "Jouer sur Genially",
+      "alt": "Logo Labyrinthe des souvenirs : un labyrinthe carré stylisé"
+    },
+    "indesign": {
+      "title": "Travaux InDesign",
+      "category": "Mise en page — édition",
+      "summary": "« L’Orée des Sens », une brochure de 18 pages consacrée à un spa au cœur de la nature : grille, typographie et rythme éditorial travaillés sur InDesign.",
+      "linkLabel": "Voir le PDF",
+      "alt": "Icône Adobe InDesign"
+    }
+  },
+  "skills": {
+    "label": "Compétences",
+    "titleHtml": "Six compétences,<br> une même exigence.",
+    "intro": "Le développement web et l’UX/UI sont mon cœur de métier. Autour, des outils créatifs que je pratique sérieusement pour livrer des projets complets, du code jusqu’à l’image.",
+    "listLabel": "Mes compétences",
+    "hint": "Choisissez une compétence pour découvrir ce que j’en fais.",
+    "usedIn": "À voir dans",
+    "levelLabel": "Niveau :",
+    "groups": { "dev": "Développement", "design": "Design", "image": "Image & vidéo" },
+    "levels": { "expert": "Expert", "pro": "Professionnel", "intermediate": "Intermédiaire", "competent": "Opérationnel" },
+    "items": {
+      "web": {
+        "name": "Développement web",
+        "tagline": "Mon cœur de métier.",
+        "description": "Des sites rapides, responsive et accessibles, au code propre et maintenable : HTML, CSS et JavaScript sur-mesure, intégrations de services et WordPress quand le projet s’y prête."
+      },
+      "uxui": {
+        "name": "UX/UI design",
+        "tagline": "L’autre moitié de mon métier.",
+        "description": "Parcours clairs, hiérarchie visuelle nette, interfaces cohérentes : je conçois des expériences qui guident l’utilisateur sans effort et donnent envie d’aller plus loin."
+      },
+      "lightroom": {
+        "name": "Lightroom",
+        "tagline": "Des images au rendu professionnel.",
+        "description": "Retouche, colorimétrie et harmonisation de séries : je prépare des photos cohérentes, prêtes à sublimer un site, un portfolio ou une campagne."
+      },
+      "figma": {
+        "name": "Figma",
+        "tagline": "Autonome, de la maquette au prototype.",
+        "description": "Wireframes, maquettes, composants et prototypes : Figma est l’outil avec lequel je conçois et présente mes interfaces avant de les développer."
+      },
+      "illustrator": {
+        "name": "Illustrator",
+        "tagline": "À l’aise avec le vectoriel.",
+        "description": "Logos, pictogrammes et éléments graphiques : je crée des visuels vectoriels nets, prêts pour le web comme pour l’impression."
+      },
+      "premiere": {
+        "name": "Premiere Pro",
+        "tagline": "Des montages propres et efficaces.",
+        "description": "Montage, rythme et habillage simple : je réalise des vidéos soignées pour le web et les réseaux sociaux."
+      }
+    }
+  },
+  "method": {
+    "label": "Méthode",
+    "titleHtml": "Une méthode claire,<br> un résultat soigné.",
+    "intro": "Chaque projet suit les mêmes étapes, pour avancer sans surprise et valider chaque décision au bon moment.",
+    "steps": [
+      { "title": "Comprendre", "text": "On échange sur vos objectifs, votre public et vos contenus. Je clarifie ce que le site doit accomplir avant de dessiner quoi que ce soit." },
+      { "title": "Concevoir", "text": "Arborescence, wireframes puis maquettes sur Figma : vous validez le design et les parcours avant la première ligne de code." },
+      { "title": "Développer", "text": "J’intègre la maquette en code propre : responsive, accessible, rapide, et multilingue si votre public le demande." },
+      { "title": "Mettre en ligne", "text": "Tests sur mobile, tablette et ordinateur, optimisation, puis mise en ligne. Et on ajuste ensemble si nécessaire." }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "titleHtml": "Parlons de<br> votre projet.",
+    "intro": "Un site à créer, une interface à repenser ou des visuels à soigner ? Écrivez-moi : je vous réponds personnellement, avec une réponse claire et concrète.",
+    "directLabel": "En direct",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "locationLabel": "Basé en",
+    "location": "Belgique",
+    "mailSubject": "Demande de collaboration — Portfolio",
+    "copy": "Copier",
+    "copyLabel": "Copier l’adresse e-mail",
+    "copied": "Adresse copiée"
+  },
+  "form": {
+    "title": "Envoyer une demande",
+    "requiredHint": "Les champs marqués d’un * sont obligatoires.",
+    "name": "Nom et prénom",
+    "email": "Adresse e-mail",
+    "company": "Entreprise ou organisation",
+    "optional": "facultatif",
+    "needLegend": "Votre besoin",
+    "needs": ["Site web", "UX/UI & maquettes", "Contenus visuels", "Autre"],
+    "message": "Votre message",
+    "messagePlaceholder": "Décrivez votre projet, vos objectifs, vos délais…",
+    "privacy": "Vos informations servent uniquement à vous répondre. L’envoi est assuré par le service FormSubmit.",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "successTitle": "Message envoyé, merci !",
+    "successText": "Votre demande est bien partie. Je vous réponds dès que possible à l’adresse indiquée.",
+    "errorTitle": "L’envoi n’a pas abouti.",
+    "errorText": "Réessayez dans un instant, ou écrivez-moi directement à",
+    "errorSummary": "Le formulaire contient des erreurs : corrigez les champs indiqués.",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Indiquez une adresse e-mail valide, par exemple nom@domaine.be.",
+      "short": "Votre message doit contenir au moins 10 caractères."
+    }
+  },
+  "footer": {
+    "tagline": "Web design · Développement · Expérience utilisateur",
+    "navLabel": "Navigation",
+    "contactLabel": "Contact",
+    "langLabel": "Langue",
+    "backToTop": "Retour en haut",
+    "rights": "Tous droits réservés."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n’existe pas ou a été déplacée.",
+    "back": "Retour à l’accueil"
+  }
+}

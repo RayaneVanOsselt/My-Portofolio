@@ -1,0 +1,106 @@
+{
+  "url": "https://rayanevanosselt.github.io/My-Portofolio/",
+  "name": "Rayane Van Osselt",
+  "brand": "RVO",
+  "brandLong": "RVO-DEVUXUI",
+  "email": "vanosselt.rayane@gmail.com",
+  "phone": { "display": "+32 483 73 07 15", "href": "+32483730715" },
+
+  "form": {
+    "endpoint": "https://formsubmit.co/ajax/vanosselt.rayane@gmail.com",
+    "fallbackAction": "https://formsubmit.co/vanosselt.rayane@gmail.com",
+    "subject": "Portfolio RVO — nouvelle demande",
+    "needs": ["Site web", "UX/UI & maquettes", "Contenus visuels", "Autre"]
+  },
+
+  "languages": [
+    { "code": "fr", "path": "", "short": "FR", "name": "Français", "locale": "fr_BE", "hreflang": "fr" },
+    { "code": "en", "path": "en/", "short": "EN", "name": "English", "locale": "en_GB", "hreflang": "en" },
+    { "code": "nl", "path": "nl/", "short": "NL", "name": "Nederlands", "locale": "nl_BE", "hreflang": "nl" }
+  ],
+  "defaultLanguage": "fr",
+
+  "sections": ["about", "work", "skills", "method", "contact"],
+
+  "projects": [
+    {
+      "id": "rufix",
+      "featured": true,
+      "url": "https://rufixbarber.com/",
+      "domain": "rufixbarber.com",
+      "accent": "#c9a45c",
+      "stack": ["HTML", "CSS", "JavaScript", "EmailJS"],
+      "shot": { "stem": "assets/img/projects/rufix-site", "widths": [720, 1200, 2000], "fallback": "assets/img/projects/rufix-site-1200.jpg", "w": 1440, "h": 900 },
+      "logo": { "stem": "assets/img/projects/rufix-logo", "widths": [320, 640], "fallback": "assets/img/projects/rufix-logo-320.png", "w": 320, "h": 320 }
+    },
+    {
+      "id": "wisy",
+      "featured": true,
+      "url": "https://wisysafety.be/",
+      "domain": "wisysafety.be",
+      "accent": "#2fb58e",
+      "stack": ["WordPress", "Elementor", "HTML", "CSS", "JavaScript"],
+      "shot": { "stem": "assets/img/projects/wisy-site", "widths": [720, 1200, 2000], "fallback": "assets/img/projects/wisy-site-1200.jpg", "w": 1440, "h": 900 },
+      "logo": { "stem": "assets/img/projects/wisy-logo", "widths": [320, 640], "fallback": "assets/img/projects/wisy-logo-320.jpg", "w": 320, "h": 320 }
+    },
+    {
+      "id": "cafe",
+      "featured": false,
+      "url": "https://www.figma.com/design/RElyYVF4qAU7IdlGzl4cxj/Team-Caf%C3%A9--Clavier--Causeries---Pratique-collaboratif?node-id=0-1&t=sN4sZSgy4mNBI4lN-1",
+      "tool": "Figma",
+      "plate": "#b09069",
+      "fit": "contain",
+      "inset": "4%",
+      "image": { "stem": "assets/img/projects/cafe", "widths": [720, 1280], "fallback": "assets/img/projects/cafe-720.jpg", "w": 1280, "h": 1071 }
+    },
+    {
+      "id": "camera",
+      "featured": false,
+      "url": "https://www.figma.com/design/4PXMrEmzsVbpCA2KM1MdPa/Maquette-cam%C3%A9ra-quartier?node-id=0-1&t=zRcTltkjKUozFzHD-1",
+      "tool": "Figma",
+      "plate": "#ffffff",
+      "fit": "contain",
+      "inset": "6%",
+      "image": { "stem": "assets/img/projects/camera", "widths": [640, 1008], "fallback": "assets/img/projects/camera-640.jpg", "w": 1008, "h": 1008 }
+    },
+    {
+      "id": "prompt",
+      "featured": false,
+      "url": "https://www.figma.com/design/RGqMD31JvasyM11NjWlvBk/G%C3%A9n%C3%A9ration-Prompt?node-id=0-1&t=gr6GIJBHIB88enQC-1",
+      "tool": "Figma",
+      "plate": "#d9d9d9",
+      "fit": "contain",
+      "inset": "9%",
+      "image": { "stem": "assets/img/projects/prompt", "widths": [800, 1600], "fallback": "assets/img/projects/prompt-800.jpg", "w": 1824, "h": 364 }
+    },
+    {
+      "id": "labyrinthe",
+      "featured": false,
+      "url": "https://view.genially.com/658003e9ac1dbd0014b8f072",
+      "tool": "Genially",
+      "plate": "#fcfbf9",
+      "fit": "contain",
+      "inset": "2%",
+      "image": { "stem": "assets/img/projects/labyrinthe", "widths": [640, 1024], "fallback": "assets/img/projects/labyrinthe-640.jpg", "w": 1024, "h": 1024 }
+    },
+    {
+      "id": "indesign",
+      "featured": false,
+      "url": "https://drive.google.com/file/d/1celDfAQkuU2JuAsVcUZZHq5HIpRlDsSl/view?usp=sharing",
+      "tool": "InDesign",
+      "plate": "#48011e",
+      "fit": "contain",
+      "inset": "24%",
+      "image": { "stem": "assets/img/projects/indesign", "widths": [500], "fallback": "assets/img/projects/indesign-500.jpg", "w": 500, "h": 488 }
+    }
+  ],
+
+  "skills": [
+    { "id": "web", "level": "expert", "group": "dev", "color": "#3aa8ff", "icon": "assets/img/skills/web-dev", "projects": ["rufix", "wisy"] },
+    { "id": "uxui", "level": "expert", "group": "design", "color": "#9d8cff", "icon": "assets/img/skills/ux-ui", "projects": ["rufix", "camera", "prompt"] },
+    { "id": "lightroom", "level": "pro", "group": "image", "color": "#31a8ff", "icon": "assets/img/skills/lightroom", "projects": [] },
+    { "id": "figma", "level": "intermediate", "group": "design", "color": "#a259ff", "icon": "assets/img/skills/figma", "projects": ["cafe", "camera", "prompt"] },
+    { "id": "illustrator", "level": "intermediate", "group": "design", "color": "#ff9a00", "icon": "assets/img/skills/illustrator", "projects": [] },
+    { "id": "premiere", "level": "competent", "group": "image", "color": "#9999ff", "icon": "assets/img/skills/premiere-pro", "projects": [] }
+  ]
+}

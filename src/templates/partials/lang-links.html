@@ -1,0 +1,2 @@
+{{#each langs as l}}<li><a class="lang-link" href="{{ l.href }}" hreflang="{{ l.hreflang }}" lang="{{ l.code }}" data-lang-link="{{ l.code }}"{{#if l.current}} aria-current="true"{{/if}}><span class="lang-link__short" aria-hidden="true">{{ l.short }}</span><span class="lang-link__name">{{ l.name }}</span></a></li>
+{{/each}}
