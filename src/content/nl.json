@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Rayane Van Osselt — UX/UI-webdesigner & webdeveloper | RVO",
-    "description": "Portfolio van Rayane Van Osselt (RVO), UX/UI-webdesigner en webdeveloper in België: websites op maat, interfaces en verzorgde visuals.",
+    "description": "Portfolio van Rayane Van Osselt (RVO), UX/UI-webdesigner, webdeveloper en sportfotograaf in België: websites op maat, interfaces en verzorgde visuals.",
     "ogTitle": "Rayane Van Osselt — Webdesign, ontwikkeling & UX/UI",
     "ogImageAlt": "Logo RVO-DEVUXUI: webdesign, ontwikkeling, gebruikerservaring",
     "jobTitle": "UX/UI-webdesigner & webdeveloper"
@@ -15,7 +15,12 @@
     "menuOpen": "Menu openen",
     "menuClose": "Menu sluiten",
     "menuLabel": "Menu",
-    "newTab": "(opent in een nieuw tabblad)"
+    "newTab": "(opent in een nieuw tabblad)",
+    "lightbox": "Fotoviewer",
+    "lightboxClose": "Viewer sluiten",
+    "lightboxPrev": "Vorige foto",
+    "lightboxNext": "Volgende foto",
+    "enlarge": "foto vergroten"
   },
   "nav": {
     "about": "Over mij",
@@ -39,7 +44,7 @@
     "titleHtml": "Eén aanspreekpunt,<br> van idee tot scherm.",
     "lead": "Ik ben Rayane Van Osselt. Ik ontwerp webervaringen van begin tot eind: ik stippel de gebruikerstrajecten uit, ontwerp de interfaces en bouw ze daarna zelf. Wat je in het ontwerp goedkeurt, is precies wat online komt.",
     "body": "Een goede website voel je nog voor je hem leest: helder, snel en consequent tot in de details. Dat stuurt elke keuze die ik maak, van de eerste wireframe tot de laatste regel code.",
-    "visual": "Mijn blik komt ook uit de wereld van het beeld. Fotobewerking, videomontage, illustratie, opmaak: ik verzorg de visuals die een interface tot leven brengen.",
+    "visual": "Mijn blik komt ook uit de wereld van het beeld: onder de naam rayvo.captures0808 ben ik sportfotograaf. Fotobewerking, videomontage, illustratie, opmaak: ik verzorg de visuals die een interface tot leven brengen.",
     "servicesLabel": "Wat ik aanbied",
     "services": [
       { "title": "Webdesign & UX/UI", "text": "Gebruikerstrajecten, wireframes, ontwerpen en prototypes in Figma, gemaakt om in enkele seconden begrepen te worden." },
@@ -50,13 +55,15 @@
   "work": {
     "label": "Geselecteerd werk",
     "titleHtml": "Van prototype<br> tot live website.",
-    "intro": "Gelanceerde websites, app-ontwerpen, een interactief spel en redactionele opmaak: een selectie die toont hoe ik werk, van concept tot detail.",
+    "intro": "Gelanceerde websites, mijn eigen merk in sportfotografie, app-ontwerpen, een interactief spel en redactionele opmaak: een selectie die toont hoe ik werk, van concept tot detail.",
     "liveLabel": "Online",
     "designTitle": "Design, prototypes & interactief",
     "designIntro": "Figma-ontwerpen, teamprojecten, een interactief spel en opmaak: de andere kant van mijn werk.",
     "roleLabel": "Rol",
     "stackLabel": "Gebouwd met",
-    "toolLabel": "Tool"
+    "toolLabel": "Tool",
+    "photoTag": "Eigen merk",
+    "settingsLabel": "Instellingen"
   },
   "projects": {
     "rufix": {
@@ -78,6 +85,42 @@
       "linkLabel": "Bezoek wisysafety.be",
       "alt": "Homepage van Wisy Safety, met de titel „La sécurité, comme une référence”",
       "logoAlt": "Logo van Wisy Safety"
+    },
+    "rayvo": {
+      "title": "rayvo.captures0808",
+      "category": "Sportfotografie & website",
+      "summary": "Mijn merk als sportfotograaf, van de lens tot de code. Ik fotografeer hockey, voetbal en rugby langs het veld, van de Belgische competitie tot de FIH Pro League, en publiceer elke wedstrijd op een website die ik zelf heb ontworpen en ontwikkeld.",
+      "features": ["Eén album per wedstrijd, online binnen 48 uur", "Direct zoeken op ploeg, tegenstander of datum", "Viewer op volledig scherm met de opname-instellingen", "Automatisch geoptimaliseerde beelden: AVIF, WebP en JPEG om te downloaden"],
+      "role": "Fotografie, nabewerking, design & ontwikkeling",
+      "linkLabel": "Bezoek rayvocaptures0808.be",
+      "alt": "Homepage van rayvo.captures0808, met de titel „Au cœur du jeu” over een hockeyfoto",
+      "coverAlt": "Hockey in de FIH Pro League: een Belgische en een Nederlandse speler in duel om de bal voor het doel",
+      "coverCaption": "België – Nederland · FIH Pro League, Heren",
+      "statsLabel": "Het project in cijfers",
+      "stats": [
+        { "value": "23", "unit": "", "label": "gefotografeerde wedstrijden" },
+        { "value": "11", "unit": "", "label": "clubs & competities" },
+        { "value": "900", "unit": "+", "label": "gepubliceerde foto’s" },
+        { "value": "48", "unit": "u", "label": "van eindsignaal tot galerij" }
+      ],
+      "reelLabel": "Contactafdruk",
+      "reelHint": "Negen beelden met hun echte opname-instellingen. Open er een om hem groot te bekijken.",
+      "frames": [
+        { "title": "De tribune ontvlamt", "context": "Union SG B – RWDM · Voetbal", "alt": "Supporters van Union Saint-Gilloise in een tribune vol blauwe en gele rook van fakkels" },
+        { "title": "Eén tegen één", "context": "Union SG B – RWDM · Voetbal", "alt": "Een speler van RWDM in het rood daagt een verdediger van Union in het geel uit, met de bal aan de voet" },
+        { "title": "Verdedigingslinie", "context": "België – Nederland · FIH Pro League", "alt": "De Belgische keepster en verdedigsters opgesteld op de doellijn voor een strafcorner" },
+        { "title": "Onder de schijnwerpers", "context": "RWDM – Charleroi B · Voetbal", "alt": "Close-up van een speler van RWDM in een rood shirt, ’s avonds onder de stadionverlichting" },
+        { "title": "Eindsignaal", "context": "Finale D1 vrouwen · Rugby", "alt": "Rugbyspeelsters omarmen elkaar en steken de armen in de lucht na de finale van het Belgisch kampioenschap" },
+        { "title": "De Ukkelse derby", "context": "Léopold – Racing · Hockey", "alt": "Een speler van Léopold in een rood-wit gestreept shirt trekt met de stick op het veld op, voor de tribunes" },
+        { "title": "Volle snelheid", "context": "Daring – Waterloo Ducks · Hockey", "alt": "Een speler van Waterloo Ducks in het wit op volle snelheid, achtervolgd door een speler van Daring" },
+        { "title": "Met het publiek", "context": "RWDM – Charleroi B · Voetbal", "alt": "De spelers van RWDM vieren ’s avonds langs het veld met hun supporters" },
+        { "title": "De ploegfoto", "context": "White Star · Hockey, Heren 1", "alt": "Ploegfoto van Heren 1 van White Star, poserend op het veld met hun sticks" }
+      ],
+      "behindLabel": "Achter de lens",
+      "behindTitle": "De fotograaf is ook de developer.",
+      "behindText": "Ik maak niet alleen de foto’s: de website waarop ze staan is volledig zelfgemaakt. Ik ontwierp hem voor spelers, ouders en clubs, die hun wedstrijd in enkele seconden terugvinden, op hun telefoon en op hun computer.",
+      "portraitAlt": "Rayane langs een voetbalveld, in een fotografenhesje, met de camera in de hand",
+      "portraitCaption": "Rayane, langs het veld"
     },
     "cafe": {
       "title": "Café Clavier Causeries",

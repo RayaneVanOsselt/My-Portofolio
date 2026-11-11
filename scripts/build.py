@@ -213,6 +213,19 @@ def picture(image: dict, base: str) -> dict:
     }
 
 
+def frames(project: dict, text: dict, base: str) -> list[dict]:
+    """Photo frames of a showcase project: image data from site.json, captions from the language file."""
+    data, words = project["frames"], text.get("frames", [])
+    if len(data) != len(words):
+        raise BuildError(f"project '{project['id']}': {len(data)} frames in site.json, {len(words)} frame texts")
+    return [{
+        **frame, **caption,
+        "image": picture(frame["image"], base),
+        "href": base + frame["image"]["fallback"],
+        "ratio": f"{frame['image']['w']} / {frame['image']['h']}",
+    } for frame, caption in zip(data, words)]
+
+
 def file_hash(*paths: Path) -> str:
     digest = hashlib.sha1()
     for path in paths:
@@ -248,9 +261,12 @@ def page_context(site: dict, t: dict, lang: dict, build: dict) -> dict:
     for i, project in enumerate(site["projects"]):
         text = t["projects"][project["id"]]
         merged = {**project, **text, "num": f"{i + 1:02d}"}
-        for key in ("shot", "logo", "image"):
+        for key in ("shot", "logo", "image", "cover", "portrait"):
             if key in project:
                 merged[key] = picture(project[key], base)
+        if "frames" in project:
+            merged["frames"] = frames(project, text, base)
+            merged["frameCount"] = f"{len(project['frames']):02d}"
         projects.append(merged)
     titles = {p["id"]: p["title"] for p in projects}
 
@@ -288,7 +304,7 @@ def page_context(site: dict, t: dict, lang: dict, build: dict) -> dict:
         "telephone": site["phone"]["href"],
         "image": site["url"] + "assets/img/brand/og-image.jpg",
         "knowsAbout": ["Web development", "UX/UI design", "Figma", "Adobe Illustrator",
-                       "Adobe Lightroom", "Adobe Premiere Pro", "WordPress"],
+                       "Adobe Lightroom", "Adobe Premiere Pro", "WordPress", "Sports photography"],
     }
     website = {
         "@type": "WebSite",
@@ -342,7 +358,9 @@ def page_context(site: dict, t: dict, lang: dict, build: dict) -> dict:
         "nav": [{"id": s, "label": t["nav"][s]} for s in site["sections"]],
         "projects": {
             "featured": [p for p in projects if p["featured"]],
-            "others": [p for p in projects if not p["featured"]],
+            # Full-bleed photo showcase, rendered between the live sites and the design mosaic.
+            "showcase": [p for p in projects if p.get("showcase")],
+            "others": [p for p in projects if not p["featured"] and not p.get("showcase")],
             "count": f"{len(projects):02d}",
         },
         "skills": skills,

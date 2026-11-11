@@ -28,7 +28,7 @@ src/templates/partials/      navigation, sélecteur de langue, icônes
 
 assets/css/main.css          design system (tokens) + styles, mobile-first
 assets/js/main.js            point d'entrée
-assets/js/modules/           en-tête, menu mobile, langues, animations, compétences, formulaire, constellation
+assets/js/modules/           en-tête, menu mobile, langues, animations, compétences, formulaire, constellation, vitrine photo, visionneuse
 assets/js/data/rvo-points.js points du monogramme RVO, échantillonnés depuis le logo
 assets/img/                  images optimisées (AVIF + repli PNG/JPEG), favicons, image Open Graph
 
@@ -52,6 +52,14 @@ En français, les espaces insécables avant `: ; ! ?` et dans les guillemets son
 2. Ajouter l'entrée dans `projects` de `src/content/site.json` (lien, outil, couleur de plaque, image).
 3. Ajouter les textes du projet dans les trois fichiers de langue, sous `projects`.
 4. Relancer le build. La mise en page de la mosaïque se règle dans `assets/css/main.css` (section « Work »).
+
+### Le projet photo (vitrine plein écran)
+
+Un projet marqué `"showcase": true` dans `site.json` (aujourd'hui **rayvo.captures0808**) n'entre ni dans les études de cas ni dans la mosaïque : il a sa propre mise en page, entre les deux — viseur plein écran, tableau de chiffres, planche contact qui défile avec la page, visionneuse plein écran et bloc « Derrière l'objectif ».
+
+- **Photos** : la liste `frames` de `site.json` (image + réglages de prise de vue lus dans l'EXIF) ; leurs légendes et textes alternatifs dans `projects.rayvo.frames` de chaque fichier de langue, **dans le même ordre**. Le build refuse les deux listes si elles n'ont pas la même longueur.
+- **Chiffres** (`stats` : matchs, clubs, photos, délai) : à mettre à jour à la main dans les trois langues quand le site photo grandit.
+- **Code** : `assets/js/modules/shoot.js` (mise au point du viseur, compteurs, planche contact) et `lightbox.js` (visionneuse), styles dans la section « 9b » de `main.css`. Sans JavaScript, la planche contact reste un défilement horizontal et chaque photo ouvre son JPEG.
 
 ## Formulaire de contact
 
