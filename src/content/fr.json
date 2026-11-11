@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Rayane Van Osselt — Web designer UX/UI & développeur web | RVO",
-    "description": "Portfolio de Rayane Van Osselt (RVO), web designer UX/UI et développeur web en Belgique : sites sur-mesure, interfaces et visuels soignés.",
+    "description": "Portfolio de Rayane Van Osselt (RVO), web designer UX/UI, développeur web et photographe sportif en Belgique : sites sur-mesure, interfaces et visuels soignés.",
     "ogTitle": "Rayane Van Osselt — Web design, développement & UX/UI",
     "ogImageAlt": "Logo RVO-DEVUXUI : web design, développement, expérience utilisateur",
     "jobTitle": "Web designer UX/UI & développeur web"
@@ -15,7 +15,12 @@
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu",
     "menuLabel": "Menu",
-    "newTab": "(s’ouvre dans un nouvel onglet)"
+    "newTab": "(s’ouvre dans un nouvel onglet)",
+    "lightbox": "Visionneuse photo",
+    "lightboxClose": "Fermer la visionneuse",
+    "lightboxPrev": "Photo précédente",
+    "lightboxNext": "Photo suivante",
+    "enlarge": "agrandir la photo"
   },
   "nav": {
     "about": "À propos",
@@ -39,7 +44,7 @@
     "titleHtml": "Un seul interlocuteur,<br> de l’idée à l’écran.",
     "lead": "Je m’appelle Rayane Van Osselt. Je conçois des expériences web de bout en bout : je structure les parcours, je dessine les interfaces, puis je les développe moi-même. Ce que vous validez en maquette est exactement ce qui arrive en ligne.",
     "body": "Pour moi, un bon site se ressent avant de se lire : il est clair, rapide et cohérent jusque dans ses détails. C’est ce qui guide chacun de mes choix, du premier wireframe à la dernière ligne de code.",
-    "visual": "Mon regard vient aussi de l’image. Retouche photo, montage vidéo, illustration, mise en page : je soigne les visuels qui donnent vie à une interface.",
+    "visual": "Mon regard vient aussi de l’image : je suis photographe sportif sous le nom rayvo.captures0808. Retouche, montage vidéo, illustration, mise en page : je soigne les visuels qui donnent vie à une interface.",
     "servicesLabel": "Ce que je propose",
     "services": [
       { "title": "Web design & UX/UI", "text": "Parcours utilisateurs, wireframes, maquettes et prototypes sur Figma, pensés pour être compris en quelques secondes." },
@@ -50,13 +55,15 @@
   "work": {
     "label": "Projets sélectionnés",
     "titleHtml": "Du prototype<br> au site en ligne.",
-    "intro": "Des sites livrés, des maquettes d’applications, un jeu interactif et de la mise en page : une sélection qui montre ma façon de travailler, du concept au détail.",
+    "intro": "Des sites livrés, ma marque de photographie sportive, des maquettes d’applications, un jeu interactif et de la mise en page : une sélection qui montre ma façon de travailler, du concept au détail.",
     "liveLabel": "En ligne",
     "designTitle": "Design, prototypes & interactif",
     "designIntro": "Maquettes Figma, projets d’équipe, jeu interactif et édition : l’autre versant de mon travail.",
     "roleLabel": "Rôle",
     "stackLabel": "Technologies",
-    "toolLabel": "Outil"
+    "toolLabel": "Outil",
+    "photoTag": "Marque personnelle",
+    "settingsLabel": "Réglages"
   },
   "projects": {
     "rufix": {
@@ -78,6 +85,42 @@
       "linkLabel": "Visiter wisysafety.be",
       "alt": "Page d’accueil du site Wisy Safety, avec le titre « La sécurité, comme une référence »",
       "logoAlt": "Logo Wisy Safety"
+    },
+    "rayvo": {
+      "title": "rayvo.captures0808",
+      "category": "Photographie sportive & site web",
+      "summary": "Ma marque de photographe sportif, de l’objectif jusqu’au code. Je photographie le hockey, le football et le rugby au bord du terrain, du championnat de Belgique jusqu’à la FIH Pro League, puis je publie chaque match sur un site que j’ai conçu et développé moi-même.",
+      "features": ["Un album par match, en ligne sous 48 h", "Recherche instantanée par équipe, adversaire ou date", "Visionneuse plein écran avec les réglages de prise de vue", "Images optimisées automatiquement : AVIF, WebP et JPEG à télécharger"],
+      "role": "Photographie, retouche, design & développement",
+      "linkLabel": "Visiter rayvocaptures0808.be",
+      "alt": "Page d’accueil du site rayvo.captures0808 : le titre « Au cœur du jeu » sur une photo de hockey",
+      "coverAlt": "Hockey en FIH Pro League : un joueur belge et un joueur néerlandais à la lutte pour la balle devant le but",
+      "coverCaption": "Belgique – Pays-Bas · FIH Pro League, Hommes",
+      "statsLabel": "Le projet en chiffres",
+      "stats": [
+        { "value": "23", "unit": "", "label": "matchs photographiés" },
+        { "value": "11", "unit": "", "label": "clubs & compétitions" },
+        { "value": "900", "unit": "+", "label": "photos publiées" },
+        { "value": "48", "unit": "h", "label": "du coup de sifflet à la galerie" }
+      ],
+      "reelLabel": "Planche contact",
+      "reelHint": "Neuf images et leurs vrais réglages de prise de vue. Ouvrez-en une pour la voir en grand.",
+      "frames": [
+        { "title": "La tribune s’embrase", "context": "Union SG B – RWDM · Football", "alt": "Supporters de l’Union Saint-Gilloise dans une tribune noyée sous les fumigènes bleus et jaunes" },
+        { "title": "Un contre un", "context": "Union SG B – RWDM · Football", "alt": "Un joueur du RWDM en rouge défie un défenseur de l’Union en jaune, ballon au pied" },
+        { "title": "Ligne de défense", "context": "Belgique – Pays-Bas · FIH Pro League", "alt": "La gardienne et les défenseuses belges alignées sur la ligne de but avant un corner" },
+        { "title": "Sous les projecteurs", "context": "RWDM – Charleroi B · Football", "alt": "Gros plan sur un joueur du RWDM en maillot rouge, de nuit, sous l’éclairage du stade" },
+        { "title": "Coup de sifflet final", "context": "Finale féminine D1 · Rugby", "alt": "Des joueuses de rugby s’enlacent et lèvent les bras après la finale du championnat de Belgique" },
+        { "title": "Le derby ucclois", "context": "Léopold – Racing · Hockey", "alt": "Un joueur du Léopold en maillot rayé rouge et blanc remonte le terrain, crosse en main, devant les tribunes" },
+        { "title": "Pleine course", "context": "Daring – Waterloo Ducks · Hockey", "alt": "Un joueur des Waterloo Ducks en blanc lancé en pleine course, suivi par un joueur du Daring" },
+        { "title": "Avec le public", "context": "RWDM – Charleroi B · Football", "alt": "Les joueurs du RWDM célèbrent avec leurs supporters au bord du terrain, de nuit" },
+        { "title": "La photo d’équipe", "context": "White Star · Hockey, Messieurs 1", "alt": "Photo d’équipe des Messieurs 1 du White Star, posant sur le terrain avec leurs crosses" }
+      ],
+      "behindLabel": "Derrière l’objectif",
+      "behindTitle": "Le photographe est aussi le développeur.",
+      "behindText": "Je ne fais pas que les photos : le site qui les accueille est entièrement fait maison. Je l’ai pensé pour les joueurs, les parents et les clubs, qui retrouvent leur match en quelques secondes, sur téléphone comme sur ordinateur.",
+      "portraitAlt": "Rayane au bord d’un terrain de football, en chasuble de photographe, l’appareil photo à la main",
+      "portraitCaption": "Rayane, au bord du terrain"
     },
     "cafe": {
       "title": "Café Clavier Causeries",

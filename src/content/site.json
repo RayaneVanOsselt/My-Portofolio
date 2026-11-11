@@ -44,6 +44,43 @@
       "logo": { "stem": "assets/img/projects/wisy-logo", "widths": [320, 640], "fallback": "assets/img/projects/wisy-logo-320.jpg", "w": 320, "h": 320 }
     },
     {
+      "id": "rayvo",
+      "featured": false,
+      "showcase": true,
+      "url": "https://rayvocaptures0808.be/",
+      "domain": "rayvocaptures0808.be",
+      "accent": "#c6f41a",
+      "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Lightroom"],
+      "wordmark": ["rayvo.", "captures", "0808"],
+      "camera": "Canon EOS R100",
+      "lens": "RF 75–300 mm",
+      "shot": { "stem": "assets/img/projects/rayvo-site", "widths": [720,  1200,  2000], "fallback": "assets/img/projects/rayvo-site-1200.jpg", "w": 1440, "h": 900 },
+      "logo": { "stem": "assets/img/projects/rayvo-mark", "widths": [160,  320], "fallback": "assets/img/projects/rayvo-mark-160.png", "w": 320, "h": 244 },
+      "cover": { "stem": "assets/img/projects/rayvo-cover", "widths": [720,  1280,  2048], "fallback": "assets/img/projects/rayvo-cover-1280.jpg", "w": 2048, "h": 1438 },
+      "coverExif": { "date": "27.06.26", "time": "20:46", "datetime": "2026-06-27T20:46", "focal": "75 mm", "aperture": "f/4.5", "shutter": "1/1000", "iso": "400" },
+      "portrait": { "stem": "assets/img/projects/rayvo-portrait", "widths": [480,  960], "fallback": "assets/img/projects/rayvo-portrait-480.jpg", "w": 960, "h": 1556 },
+      "frames": [
+        { "id": "union", "date": "03.10.26", "datetime": "2026-10-03", "focal": "75 mm", "aperture": "f/4.5", "shutter": "1/500 s", "iso": "100",
+          "image": { "stem": "assets/img/projects/rayvo-union", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-union-1280.jpg", "w": 2048, "h": 1364 } },
+        { "id": "duel", "date": "03.10.26", "datetime": "2026-10-03", "focal": "75 mm", "aperture": "f/4", "shutter": "1/800 s", "iso": "400",
+          "image": { "stem": "assets/img/projects/rayvo-duel", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-duel-1280.jpg", "w": 2048, "h": 1366 } },
+        { "id": "corner", "date": "28.06.26", "datetime": "2026-06-28", "focal": "290 mm", "aperture": "f/5.6", "shutter": "1/800 s", "iso": "400",
+          "image": { "stem": "assets/img/projects/rayvo-corner", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-corner-1280.jpg", "w": 2048, "h": 1606 } },
+        { "id": "night", "date": "12.09.26", "datetime": "2026-09-12", "focal": "29 mm", "aperture": "f/5", "shutter": "1/1000 s", "iso": "10000",
+          "image": { "stem": "assets/img/projects/rayvo-night", "widths": [480,  960,  1364], "fallback": "assets/img/projects/rayvo-night-960.jpg", "w": 1364, "h": 2046 } },
+        { "id": "rugby", "date": "16.05.26", "datetime": "2026-05-16", "focal": "18 mm", "aperture": "f/5", "shutter": "1/1000 s", "iso": "200",
+          "image": { "stem": "assets/img/projects/rayvo-rugby", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-rugby-1280.jpg", "w": 2048, "h": 1364 } },
+        { "id": "leopold", "date": "11.10.26", "datetime": "2026-10-11", "focal": "135 mm", "aperture": "f/6.3", "shutter": "1/800 s", "iso": "100",
+          "image": { "stem": "assets/img/projects/rayvo-leopold", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-leopold-1280.jpg", "w": 2048, "h": 1364 } },
+        { "id": "ducks", "date": "25.10.26", "datetime": "2026-10-25", "focal": "300 mm", "aperture": "f/6.3", "shutter": "1/800 s", "iso": "1600",
+          "image": { "stem": "assets/img/projects/rayvo-ducks", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-ducks-1280.jpg", "w": 2048, "h": 1794 } },
+        { "id": "fans", "date": "12.09.26", "datetime": "2026-09-12", "focal": "18 mm", "aperture": "f/4.5", "shutter": "1/1000 s", "iso": "10000",
+          "image": { "stem": "assets/img/projects/rayvo-fans", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-fans-1280.jpg", "w": 2048, "h": 1364 } },
+        { "id": "team", "date": "04.10.26", "datetime": "2026-10-04", "focal": "28 mm", "aperture": "f/5.6", "shutter": "1/800 s", "iso": "500",
+          "image": { "stem": "assets/img/projects/rayvo-team", "widths": [640,  1280,  2048], "fallback": "assets/img/projects/rayvo-team-1280.jpg", "w": 2048, "h": 1322 } }
+      ]
+    },
+    {
       "id": "cafe",
       "featured": false,
       "url": "https://www.figma.com/design/RElyYVF4qAU7IdlGzl4cxj/Team-Caf%C3%A9--Clavier--Causeries---Pratique-collaboratif?node-id=0-1&t=sN4sZSgy4mNBI4lN-1",
@@ -96,9 +133,9 @@
   ],
 
   "skills": [
-    { "id": "web", "level": "expert", "group": "dev", "color": "#3aa8ff", "icon": "assets/img/skills/web-dev", "projects": ["rufix", "wisy"] },
-    { "id": "uxui", "level": "expert", "group": "design", "color": "#9d8cff", "icon": "assets/img/skills/ux-ui", "projects": ["rufix", "camera", "prompt"] },
-    { "id": "lightroom", "level": "pro", "group": "image", "color": "#31a8ff", "icon": "assets/img/skills/lightroom", "projects": [] },
+    { "id": "web", "level": "expert", "group": "dev", "color": "#3aa8ff", "icon": "assets/img/skills/web-dev", "projects": ["rufix", "wisy", "rayvo"] },
+    { "id": "uxui", "level": "expert", "group": "design", "color": "#9d8cff", "icon": "assets/img/skills/ux-ui", "projects": ["rufix", "rayvo", "camera", "prompt"] },
+    { "id": "lightroom", "level": "pro", "group": "image", "color": "#31a8ff", "icon": "assets/img/skills/lightroom", "projects": ["rayvo"] },
     { "id": "figma", "level": "intermediate", "group": "design", "color": "#a259ff", "icon": "assets/img/skills/figma", "projects": ["cafe", "camera", "prompt"] },
     { "id": "illustrator", "level": "intermediate", "group": "design", "color": "#ff9a00", "icon": "assets/img/skills/illustrator", "projects": [] },
     { "id": "premiere", "level": "competent", "group": "image", "color": "#9999ff", "icon": "assets/img/skills/premiere-pro", "projects": [] }

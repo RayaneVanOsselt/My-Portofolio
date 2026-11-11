@@ -216,7 +216,154 @@
           </article>
           {{/each}}
         </div>
+      </div>
 
+      {{#each projects.showcase as p}}<article class="shoot" id="project-{{ p.id }}" aria-labelledby="project-{{ p.id }}-title" style="--accent: {{ p.accent }}" data-shoot>
+        <header class="shoot__head container">
+          <p class="case__kicker" data-reveal><span class="index">{{ p.num }}</span><span class="live">{{ t.work.liveLabel }}</span><span class="shoot__tag">{{ t.work.photoTag }}</span></p>
+          <h3 class="shoot__title" id="project-{{ p.id }}-title" data-reveal>{{ p.wordmark.0 }}<wbr>{{ p.wordmark.1 }}<span class="shoot__title-accent">{{ p.wordmark.2 }}</span></h3>
+          <div class="shoot__intro">
+            <p class="shoot__category" data-reveal>{{ p.category }}</p>
+            <p class="shoot__summary" data-reveal>{{ p.summary }}</p>
+          </div>
+        </header>
+
+        <figure class="viewfinder" data-viewfinder>
+          <div class="viewfinder__frame">
+            <div class="viewfinder__media">
+              <picture>
+                <source type="image/avif" srcset="{{ p.cover.srcset }}" sizes="100vw">
+                <img src="{{ p.cover.src }}" width="{{ p.cover.w }}" height="{{ p.cover.h }}" alt="{{ p.coverAlt }}" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="viewfinder__hud" aria-hidden="true">
+              <span class="corner corner--tl"></span><span class="corner corner--tr"></span><span class="corner corner--bl"></span><span class="corner corner--br"></span>
+              <span class="viewfinder__top">
+                <span class="viewfinder__brand">
+                  <picture class="viewfinder__mark">
+                    <source type="image/avif" srcset="{{ p.logo.srcset }}" sizes="48px">
+                    <img src="{{ p.logo.src }}" width="{{ p.logo.w }}" height="{{ p.logo.h }}" alt="" loading="lazy" decoding="async">
+                  </picture>
+                  <span>{{ p.title }}</span>
+                </span>
+                <span class="viewfinder__status"><span class="viewfinder__af-mode">AF-C</span><span>{{ p.coverExif.date }} · {{ p.coverExif.time }}</span></span>
+              </span>
+              <span class="viewfinder__af"></span>
+              <span class="viewfinder__readout">
+                <span>{{ p.coverExif.shutter }}</span>
+                <span>{{ p.coverExif.aperture }}</span>
+                <span class="viewfinder__meter"><span>−</span><span class="viewfinder__scale"></span><span>+</span></span>
+                <span>ISO {{ p.coverExif.iso }}</span>
+                <span class="viewfinder__focal">{{ p.coverExif.focal }}</span>
+              </span>
+            </div>
+          </div>
+          <figcaption class="viewfinder__caption container">
+            <span>{{ p.coverCaption }} · <time datetime="{{ p.coverExif.datetime }}">{{ p.coverExif.date }}</time></span>
+            <span class="viewfinder__gear">{{ p.camera }} · {{ p.lens }}</span>
+          </figcaption>
+        </figure>
+
+        <div class="container">
+          <dl class="scoreboard" aria-label="{{ p.statsLabel }}" data-scoreboard data-reveal>
+            {{#each p.stats as s}}<div class="scoreboard__cell">
+              <dt>{{ s.label }}</dt>
+              <dd><span class="sr-only">{{ s.value }} {{ s.unit }}</span><span aria-hidden="true"><span data-count="{{ s.value }}">{{ s.value }}</span>{{#if s.unit}}<span class="scoreboard__unit">{{ s.unit }}</span>{{/if}}</span></dd>
+            </div>
+            {{/each}}
+          </dl>
+        </div>
+
+        <div class="reel" data-reel>
+          <div class="reel__sticky">
+            <div class="reel__head container">
+              <p class="label">{{ p.reelLabel }} <span class="label__count">({{ p.frameCount }})</span></p>
+              <p class="reel__hint">{{ p.reelHint }}</p>
+              <p class="reel__counter" aria-hidden="true"><span data-reel-current>01</span> / {{ p.frameCount }}</p>
+            </div>
+            <div class="reel__viewport" data-reel-viewport>
+              <ol class="reel__track" data-reel-track>
+                {{#each p.frames as f}}<li class="frame" style="--ratio: {{ f.ratio }}">
+                  <figure>
+                    <a class="frame__link" href="{{ f.href }}" data-frame>
+                      <picture>
+                        <source type="image/avif" srcset="{{ f.image.srcset }}" sizes="(min-width: 960px) 44vw, 80vw">
+                        <img src="{{ f.image.src }}" width="{{ f.image.w }}" height="{{ f.image.h }}" alt="{{ f.alt }}" loading="lazy" decoding="async">
+                      </picture>
+                      <span class="sr-only"> — {{ t.a11y.enlarge }}</span>
+                      <span class="frame__zoom" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span>
+                    </a>
+                    <figcaption class="frame__caption">
+                      <span class="frame__meta"><span class="frame__num">{{ @num }}A</span><time datetime="{{ f.datetime }}">{{ f.date }}</time></span>
+                      <span class="frame__title">{{ f.title }}</span>
+                      <span class="frame__context">{{ f.context }}</span>
+                      <span class="frame__exif"><span class="sr-only">{{ t.work.settingsLabel }} — </span>{{ f.focal }} · {{ f.aperture }} · {{ f.shutter }} · ISO {{ f.iso }}</span>
+                    </figcaption>
+                  </figure>
+                </li>
+                {{/each}}
+              </ol>
+            </div>
+            <div class="reel__progress container" aria-hidden="true"><span data-reel-progress></span></div>
+          </div>
+        </div>
+
+        <div class="shoot__duo container">
+          <figure class="portrait" data-reveal>
+            <div class="portrait__frame">
+              <picture>
+                <source type="image/avif" srcset="{{ p.portrait.srcset }}" sizes="(min-width: 960px) 36vw, 88vw">
+                <img src="{{ p.portrait.src }}" width="{{ p.portrait.w }}" height="{{ p.portrait.h }}" alt="{{ p.portraitAlt }}" loading="lazy" decoding="async">
+              </picture>
+              <span class="corner corner--tl" aria-hidden="true"></span><span class="corner corner--tr" aria-hidden="true"></span><span class="corner corner--bl" aria-hidden="true"></span><span class="corner corner--br" aria-hidden="true"></span>
+            </div>
+            <figcaption class="portrait__caption">{{ p.portraitCaption }}</figcaption>
+          </figure>
+
+          <div class="shoot__info">
+            <p class="label" data-reveal>{{ p.behindLabel }}</p>
+            <h4 class="title-md" data-reveal>{{ p.behindTitle }}</h4>
+            <p class="shoot__text" data-reveal>{{ p.behindText }}</p>
+            <a class="browser shoot__browser" href="{{ p.url }}" target="_blank" rel="noopener" tabindex="-1" aria-describedby="new-tab-hint" data-reveal>
+              <span class="browser__bar" aria-hidden="true"><span class="browser__dots"></span><span class="browser__url">{{ p.domain }}</span></span>
+              <span class="browser__screen">
+                <picture>
+                  <source type="image/avif" srcset="{{ p.shot.srcset }}" sizes="(min-width: 960px) 46vw, 94vw">
+                  <img src="{{ p.shot.src }}" width="{{ p.shot.w }}" height="{{ p.shot.h }}" alt="{{ p.alt }}" loading="lazy" decoding="async">
+                </picture>
+              </span>
+            </a>
+            <ul class="case__features" data-reveal>
+              {{#each p.features as feature}}<li>{{ feature }}</li>
+              {{/each}}
+            </ul>
+            <dl class="case__facts" data-reveal>
+              <div><dt>{{ t.work.roleLabel }}</dt><dd>{{ p.role }}</dd></div>
+              <div><dt>{{ t.work.stackLabel }}</dt><dd><ul class="tags">{{#each p.stack as tech}}<li>{{ tech }}</li>{{/each}}</ul></dd></div>
+            </dl>
+            <a class="link-arrow link-arrow--lg" href="{{ p.url }}" target="_blank" rel="noopener" aria-describedby="new-tab-hint" data-reveal><span>{{ p.linkLabel }}</span>{{> icon-external }}</a>
+          </div>
+        </div>
+
+        <dialog class="lightbox" aria-label="{{ t.a11y.lightbox }}" data-lightbox>
+          <div class="lightbox__bar">
+            <p class="lightbox__count"><span data-lightbox-count>01</span> / {{ p.frameCount }}</p>
+            <button class="menu-close" type="button" autofocus data-lightbox-close>
+              <span class="sr-only">{{ t.a11y.lightboxClose }}</span>
+              <span class="menu-close__icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="lightbox__stage" data-lightbox-stage></div>
+          <div class="lightbox__foot">
+            <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev><span class="sr-only">{{ t.a11y.lightboxPrev }}</span>{{> icon-arrow }}</button>
+            <div class="lightbox__caption" aria-live="polite" data-lightbox-caption></div>
+            <button class="lightbox__nav" type="button" data-lightbox-next><span class="sr-only">{{ t.a11y.lightboxNext }}</span>{{> icon-arrow }}</button>
+          </div>
+        </dialog>
+      </article>
+      {{/each}}
+
+      <div class="container">
         <div class="design-work">
           <header class="design-work__head">
             <h3 class="title-md" data-reveal>{{ t.work.designTitle }}</h3>

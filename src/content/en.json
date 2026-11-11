@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Rayane Van Osselt — UX/UI Web Designer & Web Developer | RVO",
-    "description": "Portfolio of Rayane Van Osselt (RVO), UX/UI web designer and web developer in Belgium: custom websites, interfaces and polished visuals.",
+    "description": "Portfolio of Rayane Van Osselt (RVO), UX/UI web designer, web developer and sports photographer in Belgium: custom websites, interfaces and polished visuals.",
     "ogTitle": "Rayane Van Osselt — Web design, development & UX/UI",
     "ogImageAlt": "RVO-DEVUXUI logo: web design, development, user experience",
     "jobTitle": "UX/UI web designer & web developer"
@@ -15,7 +15,12 @@
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "menuLabel": "Menu",
-    "newTab": "(opens in a new tab)"
+    "newTab": "(opens in a new tab)",
+    "lightbox": "Photo viewer",
+    "lightboxClose": "Close the viewer",
+    "lightboxPrev": "Previous photo",
+    "lightboxNext": "Next photo",
+    "enlarge": "enlarge the photo"
   },
   "nav": {
     "about": "About",
@@ -39,7 +44,7 @@
     "titleHtml": "One point of contact,<br> from idea to screen.",
     "lead": "I’m Rayane Van Osselt. I design web experiences end to end: I shape the user journeys, design the interfaces, then build them myself. What you approve in the mockup is exactly what goes live.",
     "body": "To me, a good website is felt before it is read: clear, fast and consistent down to the details. That’s what drives every decision I make, from the first wireframe to the last line of code.",
-    "visual": "My eye also comes from imagery. Photo editing, video, illustration, layout: I take care of the visuals that bring an interface to life.",
+    "visual": "My eye also comes from imagery: I am a sports photographer under the name rayvo.captures0808. Photo editing, video, illustration, layout: I take care of the visuals that bring an interface to life.",
     "servicesLabel": "What I offer",
     "services": [
       { "title": "Web design & UX/UI", "text": "User journeys, wireframes, mockups and prototypes in Figma, designed to be understood in seconds." },
@@ -50,13 +55,15 @@
   "work": {
     "label": "Selected work",
     "titleHtml": "From prototype<br> to live website.",
-    "intro": "Launched websites, app mockups, an interactive game and editorial layout: a selection that shows how I work, from concept to detail.",
+    "intro": "Launched websites, my sports photography brand, app mockups, an interactive game and editorial layout: a selection that shows how I work, from concept to detail.",
     "liveLabel": "Live",
     "designTitle": "Design, prototypes & interactive",
     "designIntro": "Figma mockups, team projects, an interactive game and print layout: the other side of my work.",
     "roleLabel": "Role",
     "stackLabel": "Built with",
-    "toolLabel": "Tool"
+    "toolLabel": "Tool",
+    "photoTag": "Personal brand",
+    "settingsLabel": "Settings"
   },
   "projects": {
     "rufix": {
@@ -78,6 +85,42 @@
       "linkLabel": "Visit wisysafety.be",
       "alt": "Wisy Safety homepage, headlined “La sécurité, comme une référence”",
       "logoAlt": "Wisy Safety logo"
+    },
+    "rayvo": {
+      "title": "rayvo.captures0808",
+      "category": "Sports photography & website",
+      "summary": "My sports photography brand, from the lens all the way to the code. I shoot hockey, football and rugby from the touchline, from the Belgian league up to the FIH Pro League, then publish every match on a website I designed and built myself.",
+      "features": ["One album per match, online within 48 hours", "Instant search by team, opponent or date", "Full-screen viewer showing the camera settings", "Automatically optimised images: AVIF, WebP and downloadable JPEG"],
+      "role": "Photography, editing, design & development",
+      "linkLabel": "Visit rayvocaptures0808.be",
+      "alt": "rayvo.captures0808 homepage, headlined “Au cœur du jeu” over a hockey photo",
+      "coverAlt": "FIH Pro League hockey: a Belgian and a Dutch player battling for the ball in front of goal",
+      "coverCaption": "Belgium – Netherlands · FIH Pro League, Men",
+      "statsLabel": "The project in numbers",
+      "stats": [
+        { "value": "23", "unit": "", "label": "matches shot" },
+        { "value": "11", "unit": "", "label": "clubs & competitions" },
+        { "value": "900", "unit": "+", "label": "photos published" },
+        { "value": "48", "unit": "h", "label": "from final whistle to gallery" }
+      ],
+      "reelLabel": "Contact sheet",
+      "reelHint": "Nine frames with their real camera settings. Open one to see it full size.",
+      "frames": [
+        { "title": "The stand catches fire", "context": "Union SG B – RWDM · Football", "alt": "Union Saint-Gilloise supporters in a stand engulfed in blue and yellow flare smoke" },
+        { "title": "One on one", "context": "Union SG B – RWDM · Football", "alt": "An RWDM player in red takes on a Union defender in yellow, ball at his feet" },
+        { "title": "Line of defence", "context": "Belgium – Netherlands · FIH Pro League", "alt": "The Belgian goalkeeper and defenders lined up on the goal line before a penalty corner" },
+        { "title": "Under the floodlights", "context": "RWDM – Charleroi B · Football", "alt": "Close-up of an RWDM player in a red shirt at night, under the stadium lights" },
+        { "title": "Final whistle", "context": "Women’s D1 final · Rugby", "alt": "Rugby players embrace and raise their arms after the Belgian championship final" },
+        { "title": "The Uccle derby", "context": "Léopold – Racing · Hockey", "alt": "A Léopold player in a red and white striped shirt carries the ball upfield in front of the stands" },
+        { "title": "Full speed", "context": "Daring – Waterloo Ducks · Hockey", "alt": "A Waterloo Ducks player in white at full speed, chased by a Daring player" },
+        { "title": "With the crowd", "context": "RWDM – Charleroi B · Football", "alt": "RWDM players celebrating with their supporters by the pitch at night" },
+        { "title": "The team photo", "context": "White Star · Hockey, Men’s first team", "alt": "Team photo of the White Star men’s first team, posing on the pitch with their sticks" }
+      ],
+      "behindLabel": "Behind the lens",
+      "behindTitle": "The photographer is also the developer.",
+      "behindText": "I don’t just take the photos: the website that hosts them is entirely home-made. I designed it for players, parents and clubs, who find their match in seconds, on a phone as well as on a computer.",
+      "portraitAlt": "Rayane by a football pitch, wearing a photographer’s bib, camera in hand",
+      "portraitCaption": "Rayane, on the touchline"
     },
     "cafe": {
       "title": "Café Clavier Causeries",

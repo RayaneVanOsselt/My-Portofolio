@@ -927,6 +927,475 @@ main [tabindex="-1"]:focus-visible { outline: none; }
   .tile--indesign { grid-column: 10 / -1; margin-top: clamp(56px, 7vw, 112px); }
 }
 
+/* 9b. Photo showcase — rayvo.captures0808
+   The one project that leaves the grid: a full-bleed viewfinder that opens as it
+   scrolls in, a scoreboard, a contact sheet pinned to the scroll and a lightbox.
+   The lime of the brand's viewfinder brackets is its only accent.
+   -------------------------------------------------------------------------- */
+/* Viewfinder opening: 0 = framed and inset, 1 = full-bleed. Driven by the scroll where supported. */
+@property --vf {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+@property --af {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+
+.shoot { margin-top: clamp(120px, 14vw, 200px); }
+
+.shoot__head { display: grid; gap: var(--s-4); }
+.shoot__head .case__kicker { flex-wrap: wrap; }
+.shoot__tag {
+  padding: 4px 10px;
+  border: 1px solid var(--c-hairline);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-mist);
+}
+/* Sized to the container: the wordmark runs edge to edge on one line, from phone to desktop. */
+.shoot__title {
+  font-size: min(calc((100vw - 2 * var(--gutter)) / 8.4), 9.5rem);
+  font-weight: 300;
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+.shoot__title-accent { color: var(--accent); }
+.shoot__intro { display: grid; gap: var(--s-3); padding-top: var(--s-2); }
+.shoot__category { font-size: var(--fs-lead); font-weight: 250; letter-spacing: -0.01em; color: var(--accent); }
+.shoot__summary { color: var(--c-mist); max-width: 36rem; }
+
+@media (min-width: 960px) {
+  .shoot__intro { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: var(--s-8); align-items: start; }
+}
+
+/* Viewfinder */
+.viewfinder { margin-top: clamp(48px, 6vw, 88px); }
+.viewfinder__frame { --vf-y: 7%; --vf-x: 9%; --hud-pad: clamp(14px, 2.4vw, 36px); position: relative; }
+.viewfinder__media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0b0b0d;
+  clip-path: inset(calc((1 - var(--vf)) * var(--vf-y)) calc((1 - var(--vf)) * var(--vf-x)) round calc((1 - var(--vf)) * 28px));
+}
+.viewfinder__media { position: relative; }
+.viewfinder__media picture { height: 100%; }
+/* Light scrim at both edges so the HUD reads over any photo. */
+.viewfinder__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0) 20%, rgb(0 0 0 / 0) 76%, rgb(0 0 0 / 0.55));
+  pointer-events: none;
+}
+.viewfinder__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 47% 60%;
+  transform: scale(calc(1 + (1 - var(--vf)) * 0.16));
+}
+
+.viewfinder__hud {
+  position: absolute;
+  inset: calc((1 - var(--vf)) * var(--vf-y) + var(--hud-pad)) calc((1 - var(--vf)) * var(--vf-x) + var(--hud-pad));
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: clamp(0.5625rem, 0.5rem + 0.25vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.7);
+}
+/* Shared by the viewfinder and the portrait: the brackets of the rayvo logo. */
+.corner {
+  --size: clamp(20px, 3vw, 44px);
+  position: absolute;
+  width: var(--size); height: var(--size);
+  border: 0 solid var(--accent);
+  pointer-events: none;
+}
+.corner--tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.corner--tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.corner--bl { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.corner--br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+.viewfinder__top,
+.viewfinder__readout {
+  position: absolute;
+  left: calc(clamp(20px, 3vw, 44px) + 12px);
+  right: calc(clamp(20px, 3vw, 44px) + 12px);
+  display: flex;
+  align-items: center;
+  gap: 10px clamp(12px, 2.4vw, 32px);
+}
+.viewfinder__top { top: 0; justify-content: space-between; min-height: clamp(20px, 3vw, 44px); }
+.viewfinder__brand { display: inline-flex; align-items: center; gap: 10px; text-transform: none; letter-spacing: 0.04em; }
+.viewfinder__mark { width: clamp(26px, 2.6vw, 40px); filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.5)); }
+.viewfinder__mark img { width: 100%; }
+.viewfinder__status { display: inline-flex; gap: clamp(10px, 2vw, 24px); white-space: nowrap; }
+@media (max-width: 599px) {
+  .viewfinder__brand > span { display: none; }
+}
+.viewfinder__af-mode { color: var(--accent); }
+.viewfinder__readout { bottom: 0; justify-content: center; min-height: clamp(20px, 3vw, 44px); font-variant-numeric: tabular-nums; }
+.viewfinder__meter { display: none; align-items: center; gap: 8px; }
+/* Exposure meter: −3 … 0 … +3, needle resting on 0. */
+.viewfinder__scale {
+  position: relative;
+  width: clamp(96px, 12vw, 180px);
+  height: 9px;
+  background:
+    linear-gradient(currentColor, currentColor) 50% 0 / 1.5px 100% no-repeat,
+    repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 6)) 0 100% / calc(100% + 1px) 4px no-repeat;
+}
+.viewfinder__scale::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: -7px;
+  border: 4px solid transparent;
+  border-top-color: var(--accent);
+  translate: -50% 0;
+}
+.viewfinder__focal { display: none; }
+
+/* Autofocus point: searches, then locks on in the brand lime as the frame settles. */
+.viewfinder__af {
+  --arm: clamp(10px, 1.2vw, 16px);
+  position: absolute;
+  left: 46%; top: 50%;
+  width: clamp(64px, 9vw, 132px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  background:
+    linear-gradient(var(--af), var(--af)) 0 0 / var(--arm) 2px,
+    linear-gradient(var(--af), var(--af)) 0 0 / 2px var(--arm),
+    linear-gradient(var(--af), var(--af)) 100% 0 / var(--arm) 2px,
+    linear-gradient(var(--af), var(--af)) 100% 0 / 2px var(--arm),
+    linear-gradient(var(--af), var(--af)) 0 100% / var(--arm) 2px,
+    linear-gradient(var(--af), var(--af)) 0 100% / 2px var(--arm),
+    linear-gradient(var(--af), var(--af)) 100% 100% / var(--arm) 2px,
+    linear-gradient(var(--af), var(--af)) 100% 100% / 2px var(--arm);
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 1px rgb(0 0 0 / 0.6));
+  transition: --af 240ms var(--ease-out) 520ms, scale 620ms var(--ease-out), opacity 300ms var(--ease-out);
+}
+.viewfinder__af::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 6px; height: 6px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--af);
+}
+.js .viewfinder:not(.is-locked) .viewfinder__af { --af: rgb(255 255 255 / 0.85); scale: 1.45; opacity: 0; }
+.viewfinder.is-locked .viewfinder__af,
+.no-js .viewfinder__af { --af: var(--accent); }
+/* The blackout of the shutter, a beat after focus locks. */
+.viewfinder__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+.viewfinder.is-locked .viewfinder__frame::after { animation: shutter 260ms linear 880ms; }
+@keyframes shutter {
+  0%, 100% { opacity: 0; }
+  30% { opacity: 0.88; }
+}
+
+.viewfinder__caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 24px;
+  padding-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-ash);
+}
+.viewfinder__gear { color: var(--c-mist); }
+
+@media (min-width: 720px) {
+  .viewfinder__media { aspect-ratio: 16 / 9; }
+  .viewfinder__meter { display: inline-flex; }
+}
+@media (min-width: 1200px) {
+  /* Fits under the fixed header, so the whole HUD stays readable. */
+  .viewfinder__media { aspect-ratio: auto; height: min(calc(100svh - var(--header-h) - 24px), 58vw); }
+  .viewfinder__focal { display: inline; }
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: clamp(64px, 8vw, 120px);
+  border-top: 1px solid var(--c-hairline);
+}
+.scoreboard__cell {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: var(--s-4) var(--s-3) var(--s-4) 0;
+  border-bottom: 1px solid var(--c-hairline);
+}
+.scoreboard__cell:nth-child(even) { padding-left: var(--s-3); border-left: 1px solid var(--c-hairline); }
+.scoreboard dt { font-size: var(--fs-small); color: var(--c-mist); max-width: 16rem; }
+.scoreboard dd {
+  font-size: clamp(3rem, 1.8rem + 4.6vw, 6.5rem);
+  font-weight: 250;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.scoreboard__unit { margin-left: 0.06em; color: var(--accent); font-size: 0.6em; letter-spacing: -0.02em; }
+
+@media (min-width: 960px) {
+  .scoreboard { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .scoreboard__cell { padding: var(--s-6) var(--s-4); }
+  .scoreboard__cell:first-child { padding-left: 0; }
+  .scoreboard__cell + .scoreboard__cell { border-left: 1px solid var(--c-hairline); }
+}
+
+/* Contact sheet: a film strip. Native swipe everywhere; pinned to the vertical scroll on desktop (JS). */
+.reel { position: relative; margin-top: clamp(72px, 9vw, 136px); }
+.reel__sticky { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-5); }
+.reel__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; }
+.reel__hint { flex: 1 1 22rem; max-width: 34rem; font-size: var(--fs-small); color: var(--c-ash); }
+.reel__counter {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  color: var(--c-ash);
+  font-variant-numeric: tabular-nums;
+}
+.reel__counter span { color: var(--c-ink); }
+
+.reel__viewport {
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 0.25) transparent;
+}
+.reel__track {
+  --frame-h: min(54svh, 64vw);
+  --pad: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  position: relative;
+  display: flex;
+  gap: clamp(14px, 1.8vw, 26px);
+  width: max-content;
+  padding: 30px var(--pad);
+  background: #0c0c0f;
+}
+/* Sprocket holes along both edges of the strip. */
+.reel__track::before,
+.reel__track::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='8'%3E%3Crect x='7' width='12' height='8' rx='2' fill='%23fff' fill-opacity='.14'/%3E%3C/svg%3E") 0 0 / 26px 8px repeat-x;
+}
+.reel__track::before { top: 11px; }
+.reel__track::after { bottom: 11px; }
+
+.frame { flex: none; scroll-snap-align: center; }
+.frame figure { display: grid; gap: 16px; }
+.frame__link {
+  position: relative;
+  display: block;
+  height: var(--frame-h);
+  aspect-ratio: var(--ratio);
+  overflow: hidden;
+  border-radius: 3px;
+  background: #18181c;
+  outline-offset: 5px;
+}
+.frame__link picture { height: 100%; }
+.frame__link img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease-out), filter var(--dur) var(--ease-out);
+}
+.frame__link:hover img { transform: scale(1.04); }
+.frame__zoom {
+  position: absolute;
+  top: 14px; right: 14px;
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--c-void);
+  color: var(--accent);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+.frame__link:hover .frame__zoom,
+.frame__link:focus-visible .frame__zoom { opacity: 1; transform: none; }
+
+.frame__caption {
+  display: grid;
+  gap: 4px;
+  width: calc(var(--frame-h) * var(--ratio));
+  min-width: 15rem;
+  padding-bottom: 2px;
+}
+.frame__meta {
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: var(--c-ash);
+}
+.frame__num { color: var(--accent); }
+.frame__title { font-size: 1.0625rem; line-height: 1.3; letter-spacing: -0.015em; }
+.frame__context { font-size: var(--fs-small); color: var(--c-mist); }
+.frame__exif {
+  padding-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-ash);
+}
+
+.reel__progress { height: 1px; background: var(--c-hairline); }
+.reel__progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(var(--progress, 0));
+  transform-origin: left;
+}
+
+/* Pinned: the page scroll drives the strip sideways (enabled by reel.js on wide, fine-pointer screens). */
+.reel.is-pinned { height: calc(100svh + var(--reel-distance, 0px)); }
+.reel.is-pinned .reel__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  align-content: center;
+  padding-top: calc(var(--header-h) * 0.6);
+}
+.reel.is-pinned .reel__viewport { overflow: clip; scroll-snap-type: none; }
+.reel.is-pinned .reel__track { --frame-h: min(52svh, 640px); will-change: transform; }
+
+/* Behind the lens */
+.shoot__duo {
+  display: grid;
+  gap: clamp(56px, 7vw, 96px);
+  margin-top: clamp(96px, 11vw, 168px);
+}
+.portrait { display: grid; gap: 14px; align-content: start; }
+.portrait__frame { position: relative; padding: clamp(10px, 1.4vw, 18px); }
+.portrait__frame picture { overflow: hidden; border-radius: 4px; }
+.portrait__frame img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 22%; }
+.portrait__caption {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-ash);
+  padding-left: clamp(10px, 1.4vw, 18px);
+}
+
+.shoot__info { display: grid; gap: var(--s-3); justify-items: start; align-content: start; }
+.shoot__info .title-md { max-width: 14ch; }
+.shoot__text { color: var(--c-mist); max-width: 34rem; }
+.shoot__browser { width: 100%; margin-block: var(--s-3); }
+.shoot .case__features li::before { background: var(--accent); }
+.shoot .link-arrow--lg { color: var(--accent); }
+
+@media (min-width: 720px) {
+  .portrait__frame img { aspect-ratio: auto; }
+}
+@media (min-width: 960px) {
+  .shoot__duo { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--s-4); align-items: start; }
+  .portrait { grid-column: 1 / span 5; position: sticky; top: calc(var(--header-h) + 32px); }
+  .portrait__frame img { max-height: calc(100svh - var(--header-h) - 120px); }
+  .shoot__info { grid-column: 7 / -1; padding-top: var(--s-8); }
+}
+
+/* Lightbox — a native modal <dialog>, like the mobile menu. */
+html:has(.lightbox[open]) { overflow: hidden; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0 var(--gutter) max(var(--s-3), env(safe-area-inset-bottom));
+  border: 0;
+  background: rgb(0 0 0 / 0.97);
+  color: var(--c-ink);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  opacity: 0;
+  transition: opacity 320ms var(--ease-out), overlay 320ms allow-discrete, display 320ms allow-discrete;
+}
+.lightbox[open] { display: grid; opacity: 1; }
+@starting-style { .lightbox[open] { opacity: 0; } }
+.lightbox::backdrop { background: var(--c-void); }
+
+.lightbox__bar { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); }
+.lightbox__count { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.08em; color: var(--c-ash); font-variant-numeric: tabular-nums; }
+.lightbox__count span { color: var(--accent); }
+
+.lightbox__stage { position: relative; min-height: 0; touch-action: pan-y; }
+/* Flex (not grid) so the photo's max-height resolves against the stage height. */
+.lightbox__stage picture { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.lightbox__stage img {
+  width: auto; height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.lightbox__foot {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: var(--s-3);
+  padding-top: var(--s-3);
+}
+.lightbox__caption { display: grid; gap: 4px; justify-items: center; text-align: center; min-height: 5.5em; align-content: center; }
+.lightbox__caption .frame__meta { justify-content: center; }
+.lightbox__nav {
+  display: grid;
+  place-items: center;
+  width: 48px; height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--c-smoke);
+  color: var(--c-ink);
+  transition: background-color var(--dur-fast);
+}
+.lightbox__nav:hover { background: rgb(255 255 255 / 0.14); }
+.lightbox__nav--prev .icon { transform: rotate(180deg); }
+
 /* 10. Skills — an interactive console (ARIA tabs)
    -------------------------------------------------------------------------- */
 .skills__console {
@@ -1370,7 +1839,9 @@ a.channel__value:hover { background-size: 100% 1px; color: var(--c-spark); }
 
 /* Switching language should feel like the same page, not a new visit. */
 .is-lang-switch .hero *,
-.is-lang-switch [data-reveal] { animation: none !important; transition: none !important; }
+.is-lang-switch [data-reveal],
+.is-lang-switch .viewfinder__af,
+.is-lang-switch .viewfinder__frame::after { animation: none !important; transition: none !important; }
 
 @view-transition { navigation: auto; }
 ::view-transition-old(root),
@@ -1387,6 +1858,17 @@ a.channel__value:hover { background-size: 100% 1px; color: var(--c-spark); }
     from { transform: translateY(0); }
     to { transform: translateY(-9%); }
   }
+
+  /* The viewfinder opens from a framed shot to full-bleed as it scrolls into view. */
+  .viewfinder__frame {
+    animation: viewfinder-open linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 48%;
+  }
+  @keyframes viewfinder-open {
+    from { --vf: 0; }
+    to { --vf: 1; }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1400,6 +1882,9 @@ a.channel__value:hover { background-size: 100% 1px; color: var(--c-spark); }
   .reveal-ready [data-reveal] { opacity: 1; transform: none; }
   .skill-panel__orbit, .scroll-cue__line::after { animation: none !important; }
   .browser__screen img { animation: none !important; transform: none !important; }
+  .viewfinder__frame { animation: none !important; --vf: 1; }
+  .viewfinder__frame::after { display: none; }
+  .js .viewfinder:not(.is-locked) .viewfinder__af { --af: var(--accent); scale: 1; opacity: 1; }
   @view-transition { navigation: none; }
 }
 
@@ -1415,7 +1900,10 @@ a.channel__value:hover { background-size: 100% 1px; color: var(--c-spark); }
 /* Print: keep it readable and ink-friendly. */
 @media print {
   html, body { background: #fff; color: #000; }
-  .site-header, .mobile-menu, .hero__canvas, .scroll-cue, .skills__list, .contact-form, .to-top { display: none !important; }
+  .site-header, .mobile-menu, .hero__canvas, .scroll-cue, .skills__list, .contact-form, .to-top,
+  .viewfinder__hud, .lightbox, .reel__progress, .frame__zoom { display: none !important; }
+  .reel__viewport { overflow: visible; }
+  .reel__track { flex-wrap: wrap; width: auto; background: none; }
   .skill-panel[hidden] { display: grid !important; }
   .reveal-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
   a { color: #000; }
